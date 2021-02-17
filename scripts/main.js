@@ -72,14 +72,31 @@
     });
   }
 
-  $("#btn").click(function () {
-  	let n = $("#n").val();
 
-  	let r = $("#r").val();
 
-  	v = (1 - 1 / r) * n;
 
-  	console.log(v);
-  	$("#output").html = v;
-  });
+
+
 })();
+
+// $("#btn").click(function () {
+//   let n = $("#n").val();
+//
+//   let r = $("#r").val();
+//
+//   v = (1 - 1 / r) * n;
+//
+//   console.log(v);
+//   $("#output").html = v;
+// });
+
+$("#btn").click(function () {
+  let n = $("#n").val();
+
+  let r = $("#r").val();
+
+  v = (1 - 1 / r) * n;
+
+  console.log(v);
+  $("#output").html = v;
+});
