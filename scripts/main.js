@@ -90,13 +90,72 @@
 //   $("#output").html = v;
 // });
 
-$("#btn").click(function () {
-  let n = $("#n").val();
+
+// $("#btn").click(function () {
+//   let n = $("#n").val();
+//
+//   let r = $("#r").val();
+//
+//   v = (1 - 1 / r) * n;
+//
+//   // console.log(v);
+//   // return v;
+// });
+
+
+$("#button_one").click(function () {
+  let t = $("#t").val();
+
+  let a = $("#a").val();
 
   let r = $("#r").val();
+    if (r >= 1) {
+      alert("Rate of Infection must be a decimal");
+      return;
+    }
 
-  v = (1 - 1 / r) * n;
+  let v = $("#v").val();
 
-  console.log(v);
-  $("#output").html = v;
+  // v = (1 - 1 / r) * n;
+
+  // s is number of sick people
+
+  s = a * (1 + r) ** t;
+
+
+
+
+  // let n = $("#n").val();
+	$(".dot").addClass("hide");
+	// let x = $("#x").val();
+  let x = s
+	if (x < 0 || x > 100) alert("Value should be between 0 - 100");
+	// v = (1 - 1 / r) * n;
+	// console.log(x);
+
+	for (i = 0; i < x; i++) {
+		var newDot = $("#seed").clone();
+		newDot.removeClass("hide");
+		newDot.addClass("red");
+		newDot.appendTo(".dot_holder");
+	}
+
+  for (i = 0; i < v; i++) {
+		var bDot = $("#seed").clone();
+		bDot.removeClass("hide");
+		bDot.addClass("blue");
+		bDot.appendTo(".dot_holder");
+	}
+
+
+	let y = 99 - x;
+
+	for (i = 0; i < y; i++) {
+		var greyDot = $("#seed").clone();
+		greyDot.removeClass("hide");
+		// newDot.addClass("red");
+		greyDot.appendTo(".dot_holder");
+	}
+
+	// $("#output").html = v;
 });
