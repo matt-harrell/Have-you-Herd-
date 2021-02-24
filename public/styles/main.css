@@ -1,0 +1,28 @@
+html,body{
+  height: 100%:
+}
+ img{
+   width: 100%
+ }
+
+ .dot {
+ 	width: 1em;
+ 	height: 1em;
+ 	background: grey;
+ 	border-radius: 50%;
+ 	margin: 0.5em;
+ 	display: inline-block;
+ 	/* 	border: 1px solid black; */
+ }
+
+ .hide {
+ 	visibility: hidden;
+ }
+
+ .red {
+ 	background: red;
+ }
+
+ .blue {
+ 	background: blue;
+ }
