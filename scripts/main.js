@@ -149,7 +149,7 @@ $("#button_one").click(function () {
 	}
 
 
-	let y = 99 - x;
+	let y = 100 - x;
 
 	for (i = 0; i < y; i++) {
 		var greyDot = $("#seed").clone();
