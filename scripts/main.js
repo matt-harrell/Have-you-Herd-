@@ -129,10 +129,11 @@ $("#button_one").click(function () {
 	$(".dot").addClass("hide");
 	// let x = $("#x").val();
   let x = s
-	if (x < 0 || x > 100) alert("Value should be between 0 - 100");
+  if (x < 0 || x > 100) {
+    alert("Value should be between 1 - 100");
 	// v = (1 - 1 / r) * n;
 	// console.log(x);
-
+} else {
 	for (i = 0; i < x; i++) {
 		var newDot = $("#seed").clone();
 		newDot.removeClass("hide");
@@ -156,6 +157,7 @@ $("#button_one").click(function () {
 		// newDot.addClass("red");
 		greyDot.appendTo(".dot_holder");
 	}
+}
 
 	// $("#output").html = v;
 });

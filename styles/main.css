@@ -16,7 +16,8 @@ html,body{
  }
 
  .hide {
- 	visibility: hidden;
+ 	/* visibility: hidden; */
+  display: block;
  }
 
  .red {
