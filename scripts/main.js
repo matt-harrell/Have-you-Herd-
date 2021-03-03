@@ -102,6 +102,32 @@
 //   // return v;
 // });
 
+const allRanges = document.querySelectorAll(".range-wrap");
+allRanges.forEach(wrap => {
+  const range = wrap.querySelector(".range");
+  const bubble = wrap.querySelector(".bubble");
+
+  range.addEventListener("input", () => {
+    setBubble(range, bubble);
+  });
+  setBubble(range, bubble);
+});
+
+function setBubble(range, bubble) {
+  const val = range.value;
+  const min = range.min ? range.min : 0;
+  const max = range.max ? range.max : 100;
+  // const newVal = Number(((val - min) * 100) / (max - min));
+  // bubble.innerHTML = val;
+  const newVal = Number(((val - min) * 100) / (max - min));
+  bubble.innerHTML = val;
+
+  // Sorta magic numbers based on size of the native UI thumb
+  // bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
+}
+
+
+
 
 $("#button_one").click(function () {
   let t = $("#t").val();
@@ -109,10 +135,6 @@ $("#button_one").click(function () {
   let a = $("#a").val();
 
   let r = $("#r").val();
-    if (r >= 1) {
-      alert("Rate of Infection must be a decimal");
-      return;
-    }
 
   let v = $("#v").val();
 
@@ -120,7 +142,7 @@ $("#button_one").click(function () {
 
   // s is number of sick people
 
-  s = a * (1 + r) ** t;
+var s = a * (1 + r) ** 1;
 
 
 
@@ -128,13 +150,13 @@ $("#button_one").click(function () {
   // let n = $("#n").val();
 	$(".dot").addClass("hide");
 	// let x = $("#x").val();
-  let x = s
-  if (x < 0 || x > 100) {
+  // let x = s
+  if (s < 0 || s > 100) {
     alert("Value should be between 1 - 100");
 	// v = (1 - 1 / r) * n;
 	// console.log(x);
 } else {
-	for (i = 0; i < x; i++) {
+	for (i = 0; i < s; i++) {
 		var newDot = $("#seed").clone();
 		newDot.removeClass("hide");
 		newDot.addClass("red");
@@ -143,13 +165,13 @@ $("#button_one").click(function () {
 
   for (i = 0; i < v; i++) {
 		var bDot = $("#seed").clone();
-		bDot.removeClass("hide");
+    bDot.removeClass("hide");
 		bDot.addClass("blue");
 		bDot.appendTo(".dot_holder");
 	}
 
 
-	let y = 100 - x;
+	var y = 98 - s;
 
 	for (i = 0; i < y; i++) {
 		var greyDot = $("#seed").clone();
