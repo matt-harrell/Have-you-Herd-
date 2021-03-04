@@ -79,52 +79,46 @@
 
 })();
 
-// $("#btn").click(function () {
-//   let n = $("#n").val();
+
+
+document.getElementById("a").oninput = function () {
+	document.getElementById("aspanscale").innerHTML = this.value;
+};
+
+document.getElementById("r").oninput = function () {
+	document.getElementById("rspanscale").innerHTML = this.value;
+};
+
+document.getElementById("v").oninput = function () {
+	document.getElementById("vspanscale").innerHTML = this.value;
+};
+
+
+
+
+// const allRanges = document.querySelectorAll(".range-wrap");
+// allRanges.forEach(wrap => {
+//   const range = wrap.querySelector(".range");
+//   const bubble = wrap.querySelector(".bubble");
 //
-//   let r = $("#r").val();
-//
-//   v = (1 - 1 / r) * n;
-//
-//   console.log(v);
-//   $("#output").html = v;
+//   range.addEventListener("input", () => {
+//     setBubble(range, bubble);
+//   });
+//   setBubble(range, bubble);
 // });
-
-
-// $("#btn").click(function () {
-//   let n = $("#n").val();
 //
-//   let r = $("#r").val();
+// function setBubble(range, bubble) {
+//   const val = range.value;
+//   const min = range.min ? range.min : 0;
+//   const max = range.max ? range.max : 100;
+//   // const newVal = Number(((val - min) * 100) / (max - min));
+//   // bubble.innerHTML = val;
+//   const newVal = Number(((val - min) * 100) / (max - min));
+//   bubble.innerHTML = val;
 //
-//   v = (1 - 1 / r) * n;
-//
-//   // console.log(v);
-//   // return v;
-// });
-
-const allRanges = document.querySelectorAll(".range-wrap");
-allRanges.forEach(wrap => {
-  const range = wrap.querySelector(".range");
-  const bubble = wrap.querySelector(".bubble");
-
-  range.addEventListener("input", () => {
-    setBubble(range, bubble);
-  });
-  setBubble(range, bubble);
-});
-
-function setBubble(range, bubble) {
-  const val = range.value;
-  const min = range.min ? range.min : 0;
-  const max = range.max ? range.max : 100;
-  // const newVal = Number(((val - min) * 100) / (max - min));
-  // bubble.innerHTML = val;
-  const newVal = Number(((val - min) * 100) / (max - min));
-  bubble.innerHTML = val;
-
-  // Sorta magic numbers based on size of the native UI thumb
-  // bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
-}
+//   // Sorta magic numbers based on size of the native UI thumb
+//   // bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
+// }
 
 
 
@@ -135,27 +129,59 @@ $("#button_one").click(function () {
   let a = $("#a").val();
 
   let r = $("#r").val();
+// r value test to see if recognizes decimal
+// conculsion: it does
+
+  // $(".dot").addClass("hide");
+  // for (i = 0; i < r; i++) {
+	// 	var newDot = $("#seed").clone();
+	// 	newDot.removeClass("hide");
+	// 	newDot.addClass("red");
+	// 	newDot.appendTo(".dot_holder");
+
+
 
   let v = $("#v").val();
 
-  // v = (1 - 1 / r) * n;
+
 
   // s is number of sick people
+  // something is messing with formula slider
 
-var s = a * (1 + r) ** 1;
+// var s = a * (1 + r) ** t;
+// var s = a * (Math.pow(1 + r, t));
+
+var s = a + r + t;
+// one of the varibles is adding 10
+
+// var s = a + r;
+// added 10
+
+// var s = t + r;
+// added 10
+
+// var s = r;
+// did not add 10
+
+// var s = t;
+// did not add 10
+
+// var s = a;
+// did not add 10
+
+// conculsion: somewhere 10 is being added
 
 
 
 
-  // let n = $("#n").val();
 	$(".dot").addClass("hide");
-	// let x = $("#x").val();
-  // let x = s
+
   if (s < 0 || s > 100) {
     alert("Value should be between 1 - 100");
-	// v = (1 - 1 / r) * n;
-	// console.log(x);
+    console.log(s);
+
 } else {
+  console.log(s);
 	for (i = 0; i < s; i++) {
 		var newDot = $("#seed").clone();
 		newDot.removeClass("hide");
@@ -181,5 +207,5 @@ var s = a * (1 + r) ** 1;
 	}
 }
 
-	// $("#output").html = v;
+
 });
