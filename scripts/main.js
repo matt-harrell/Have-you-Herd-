@@ -96,6 +96,14 @@ document.getElementById("v").oninput = function () {
 
 
 
+
+
+
+
+
+
+
+
 // const allRanges = document.querySelectorAll(".range-wrap");
 // allRanges.forEach(wrap => {
 //   const range = wrap.querySelector(".range");
@@ -124,11 +132,84 @@ document.getElementById("v").oninput = function () {
 
 
 $("#button_one").click(function () {
-  let t = $("#t").val();
+  // var people = [];
+  // people[0]= "<section class='dot'></section>";
+  // people[1]= "<section class='dot'></section>";
+  // people[2]= "<section class='dot'></section>";
+  // people[3]= "<section class='dot'></section>";
+  // people[4]= "<section class='dot'></section>";
+  // people[5]= "<section class='dot'></section>";
+  // people[6]= "<section class='dot'></section>";
+  // people[7]= "<section class='dot'></section>";
+  // people[8]= "<section class='dot'></section>";
+  // people[9]= "<section class='dot'></section>";
+  // people[10]= "<section class='dot'></section>";
+  // people[11]= "<section class='dot'></section>";
+  // people[12]= "<section class='dot'></section>";
+  // people[13]= "<section class='dot'></section>";
+  // people[14]= "<section class='dot'></section>";
+  // people[15]= "<section class='dot'></section>";
+  // people[16]= "<section class='dot'></section>";
+  // people[17]= "<section class='dot'></section>";
+  // people[18]= "<section class='dot'></section>";
+  // people[19]= "<section class='dot'></section>";
+  // people[20]= "<section class='dot'></section>";
+  // people[21]= "<section class='dot'></section>";
+  // people[22]= "<section class='dot'></section>";
+  // people[23]= "<section class='dot'></section>";
+  // people[24]= "<section class='dot'></section>";
+  // people[25]= "<section class='dot'></section>";
+  // people[26]= "<section class='dot'></section>";
+  // people[27]= "<section class='dot'></section>";
+  // people[28]= "<section class='dot'></section>";
+  // people[29]= "<section class='dot'></section>";
+  // people[30]= "<section class='dot'></section>";
+  // people[31]= "<section class='dot'></section>";
+  // people[32]= "<section class='dot'></section>";
+  // people[33]= "<section class='dot'></section>";
+  // people[34]= "<section class='dot'></section>";
+  // people[35]= "<section class='dot'></section>";
+  // people[36]= "<section class='dot'></section>";
+  // people[37]= "<section class='dot'></section>";
+  // people[38]= "<section class='dot'></section>";
+  // people[39]= "<section class='dot'></section>";
+  // people[40]= "<section class='dot'></section>";
+  // people[41]= "<section class='dot'></section>";
+  // people[42]= "<section class='dot'></section>";
+  // people[43]= "<section class='dot'></section>";
+  // people[44]= "<section class='dot'></section>";
+  // people[45]= "<section class='dot'></section>";
+  // people[46]= "<section class='dot'></section>";
+  // people[47]= "<section class='dot'></section>";
+  // people[48]= "<section class='dot'></section>";
+  // people[49]= "<section class='dot'></section>";
 
-  let a = $("#a").val();
 
-  let r = $("#r").val();
+
+
+  // document.getElementById("dot_holder").innerHTML = people.join("");
+
+
+
+
+
+
+
+  // var t = $("#t").val();
+
+  // var t = $("#t").val();
+
+
+  var t = Number($("#t").val());
+
+  var a = Number($("#a").val());
+
+  // var r = $("#r").val();
+
+
+
+  var r = Number($("#r").val());
+
 // r value test to see if recognizes decimal
 // conculsion: it does
 
@@ -141,17 +222,26 @@ $("#button_one").click(function () {
 
 
 
-  let v = $("#v").val();
+  var v = Number($("#v").val());
 
 
 
   // s is number of sick people
   // something is messing with formula slider
 
-// var s = a * (1 + r) ** t;
+var e = 2.71828183
+// var s1 = r+t;
+
+var s = a * e**(t+r);
+var y = 99 - s - v
+
+
+
+
+
 // var s = a * (Math.pow(1 + r, t));
 
-var s = a + r + t;
+// var s = a + r + t;
 // one of the varibles is adding 10
 
 // var s = a + r;
@@ -173,15 +263,33 @@ var s = a + r + t;
 
 
 
+// document.getElementById("dot_holder").innerHTML = people.slice(0,v).join("");
+// document.getElementById("dot_holder").innerHTML = people.slice(0,s1).join("");
+// console.log(s1);
+// console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', a = ' + a);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	$(".dot").addClass("hide");
 
-  if (s < 0 || s > 100) {
+  if (s > 100) {
     alert("Value should be between 1 - 100");
-    console.log(s);
+    console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a);
+
 
 } else {
-  console.log(s);
+  console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a);
 	for (i = 0; i < s; i++) {
 		var newDot = $("#seed").clone();
 		newDot.removeClass("hide");
@@ -197,7 +305,7 @@ var s = a + r + t;
 	}
 
 
-	var y = 98 - s;
+
 
 	for (i = 0; i < y; i++) {
 		var greyDot = $("#seed").clone();
