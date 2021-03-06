@@ -41,72 +41,92 @@
   </head>
   <body>
     <!-- Add your site or app content here -->
-<div id="wrapper" class="d-flex justify-content-center">
 
 
-<!-- did i break? -->
-
-  <!-- <div id="ui">
-
-    <div id="totalinfected">
-      <label for="y">Total Infected</label>
-      <input type="number" id="n" />
-    </div>
-
-    <div id="rval">
-      <label for="r">R Value:</label>
-      <input type="numßber" id="r">
-    </div>
-
-    <button id="btn">Submit</button>
-
-    <h1 id="output"></h1>
-
-  </div> -->
 
 
-  <div class="container-fluid text-center">
+  <div class="container-md text-center">
 	<!-- or container fluid -->
-	 <div class="row">&nbsp;</div>
+	 <!-- <div class="row">&nbsp;</div> -->
 
    <!-- <div class="row justify-content-center">
       <label for="x">Value:</label>
 		  <input type="number" id="x" min="0" max="100" step="1" />
 		  <button class="btn btn-danger" id="button_one">Submit</button>
 	 </div> -->
-   <div id="ui">
 
-     <div id="time">
-       <label for="t">Time</label>
-       <input type="number" id="t" />
-     </div>
+   <div class="" id="ui">
 
-     <div id="currentinfected">
+    <div class="row">
+
+      <div id="time">
+          <label for="t">Time</label>
+          <input type="number" id="t">
+      </div>
+
+    </div>
+
+    <div class="row">
+
+     <!-- <div class="range-wrap" style="max-width:720px" id="currentinfected">
        <label for="a">Current Infected</label>
-       <input type="number" id="a" />
-     </div>
+       <input type="range" class="range" min="0" max="5">
+       <output class="bubble" id="a"></output> -->
 
-     <div id="rval">
-       <label for="r">Rate of Infection</label>
-       <input type="number" id="r">
-     </div>
+       <input type="range" min="1" max="5" step="1" value="1.0" id="a">
+           Current Infected:<text id="aspanscale" style="inline">1.0</text>
 
-     <div id="vaccinated">
-       <label for="v">vaccinated</label>
-       <input type="number" id="v">
-     </div>
+      </div>
 
-     <button id="button_one">Submit</button>
+    </div>
 
-     <!-- <h1 id="output"></h1> -->
+    <div class="row">
+
+      <!-- <div id="rval">
+        <label for="r">rate of Infection</label>
+        <input type="number" id="r">
+      </div> -->
+
+      <!-- <div class="range-wrap" style="max-width:720px">
+        <label for="r">Rate of Infection</label>
+        <input type="range" value="1.0" class="range" min="0" max=".99" step=".01">
+        <output class="bubble" id="r"></output>
+      </div> -->
+
+      <input type="range" min=".01" max=".99" step="0.01" value=".01" id="r">
+          Rate of Infection:<text id="rspanscale" style="inline">.01</text>
+
+    </div>
+
+    <div class="row">
+
+
+      <!-- <div class="range-wrap" style="max-width:720px">
+        <label for="v">Number Vaccinated</label>
+        <input type="range" class="range" min="0" max="99">
+        <output class="bubble" id="v"></output>
+      </div> -->
+
+      <input type="range" min="0" max="99" step="1" value="1.0" id="v">
+          Vaccinated:<text id="vspanscale" style="inline">1.0</text>
+
+    </div>
+
+    <button id="button_one">Submit</button>
+
+
+
 
    </div>
 
-   <div class="row justify-content-center">
+   <div class="d-flex justify-content-center">
 
-     <div class="dot_holder" style="max-width: 17em;">
+     <div class="dot_holder" id="dot_holder" style="max-width: 17em;">
 
 	     <section class="dot hide" id="seed"></section>
+
+
+
 			<!-- 		<section class="dot" id=""></section>
 		<section class="dot" id=""></section>
 		<section class="dot" id=""></section>
@@ -128,7 +148,6 @@
 
 
 
-</div>
 
 
     <!-- build:js scripts/main.min.js -->
