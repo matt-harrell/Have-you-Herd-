@@ -98,191 +98,32 @@ document.getElementById("v").oninput = function () {
 
 
 
-
-
-
-
-
-
-// const allRanges = document.querySelectorAll(".range-wrap");
-// allRanges.forEach(wrap => {
-//   const range = wrap.querySelector(".range");
-//   const bubble = wrap.querySelector(".bubble");
-//
-//   range.addEventListener("input", () => {
-//     setBubble(range, bubble);
-//   });
-//   setBubble(range, bubble);
-// });
-//
-// function setBubble(range, bubble) {
-//   const val = range.value;
-//   const min = range.min ? range.min : 0;
-//   const max = range.max ? range.max : 100;
-//   // const newVal = Number(((val - min) * 100) / (max - min));
-//   // bubble.innerHTML = val;
-//   const newVal = Number(((val - min) * 100) / (max - min));
-//   bubble.innerHTML = val;
-//
-//   // Sorta magic numbers based on size of the native UI thumb
-//   // bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
-// }
-
-
-
-
 $("#button_one").click(function () {
-  // var people = [];
-  // people[0]= "<section class='dot'></section>";
-  // people[1]= "<section class='dot'></section>";
-  // people[2]= "<section class='dot'></section>";
-  // people[3]= "<section class='dot'></section>";
-  // people[4]= "<section class='dot'></section>";
-  // people[5]= "<section class='dot'></section>";
-  // people[6]= "<section class='dot'></section>";
-  // people[7]= "<section class='dot'></section>";
-  // people[8]= "<section class='dot'></section>";
-  // people[9]= "<section class='dot'></section>";
-  // people[10]= "<section class='dot'></section>";
-  // people[11]= "<section class='dot'></section>";
-  // people[12]= "<section class='dot'></section>";
-  // people[13]= "<section class='dot'></section>";
-  // people[14]= "<section class='dot'></section>";
-  // people[15]= "<section class='dot'></section>";
-  // people[16]= "<section class='dot'></section>";
-  // people[17]= "<section class='dot'></section>";
-  // people[18]= "<section class='dot'></section>";
-  // people[19]= "<section class='dot'></section>";
-  // people[20]= "<section class='dot'></section>";
-  // people[21]= "<section class='dot'></section>";
-  // people[22]= "<section class='dot'></section>";
-  // people[23]= "<section class='dot'></section>";
-  // people[24]= "<section class='dot'></section>";
-  // people[25]= "<section class='dot'></section>";
-  // people[26]= "<section class='dot'></section>";
-  // people[27]= "<section class='dot'></section>";
-  // people[28]= "<section class='dot'></section>";
-  // people[29]= "<section class='dot'></section>";
-  // people[30]= "<section class='dot'></section>";
-  // people[31]= "<section class='dot'></section>";
-  // people[32]= "<section class='dot'></section>";
-  // people[33]= "<section class='dot'></section>";
-  // people[34]= "<section class='dot'></section>";
-  // people[35]= "<section class='dot'></section>";
-  // people[36]= "<section class='dot'></section>";
-  // people[37]= "<section class='dot'></section>";
-  // people[38]= "<section class='dot'></section>";
-  // people[39]= "<section class='dot'></section>";
-  // people[40]= "<section class='dot'></section>";
-  // people[41]= "<section class='dot'></section>";
-  // people[42]= "<section class='dot'></section>";
-  // people[43]= "<section class='dot'></section>";
-  // people[44]= "<section class='dot'></section>";
-  // people[45]= "<section class='dot'></section>";
-  // people[46]= "<section class='dot'></section>";
-  // people[47]= "<section class='dot'></section>";
-  // people[48]= "<section class='dot'></section>";
-  // people[49]= "<section class='dot'></section>";
 
-
-
-
-  // document.getElementById("dot_holder").innerHTML = people.join("");
-
-
-
-
-
-
-
-  // var t = $("#t").val();
-
-  // var t = $("#t").val();
 
 
   var t = Number($("#t").val());
 
   var a = Number($("#a").val());
 
-  // var r = $("#r").val();
-
-
-
   var r = Number($("#r").val());
-
-// r value test to see if recognizes decimal
-// conculsion: it does
-
-  // $(".dot").addClass("hide");
-  // for (i = 0; i < r; i++) {
-	// 	var newDot = $("#seed").clone();
-	// 	newDot.removeClass("hide");
-	// 	newDot.addClass("red");
-	// 	newDot.appendTo(".dot_holder");
-
-
 
   var v = Number($("#v").val());
 
 
 
-  // s is number of sick people
-  // something is messing with formula slider
+
+
 
 var e = 2.71828183
-// var s1 = r+t;
-
+  // s is number of sick people
 var s = a * e**(t+r);
-var y = 99 - s - v
+var y = 99 - s - v;
 
 
 
-
-
-// var s = a * (Math.pow(1 + r, t));
-
-// var s = a + r + t;
-// one of the varibles is adding 10
-
-// var s = a + r;
-// added 10
-
-// var s = t + r;
-// added 10
-
-// var s = r;
-// did not add 10
-
-// var s = t;
-// did not add 10
-
-// var s = a;
-// did not add 10
-
-// conculsion: somewhere 10 is being added
-
-
-
-// document.getElementById("dot_holder").innerHTML = people.slice(0,v).join("");
-// document.getElementById("dot_holder").innerHTML = people.slice(0,s1).join("");
-// console.log(s1);
-// console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', a = ' + a);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	$(".dot").addClass("hide");
-
+$(".dot").addClass("hide");
+function dotCreate() {
   if (s > 100) {
     alert("Value should be between 1 - 100");
     console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a);
@@ -310,10 +151,23 @@ var y = 99 - s - v
 	for (i = 0; i < y; i++) {
 		var greyDot = $("#seed").clone();
 		greyDot.removeClass("hide");
-		// newDot.addClass("red");
+		greyDot.addClass("grey");
 		greyDot.appendTo(".dot_holder");
 	}
+  return;
+}
 }
 
+ function resetDots() {
+   var tr = gsap.timeline();
+   $(".dot.red, .dot.blue, .dot.grey").detach();
+   return tr;
+ }
+
+var master = gsap.timeline();
+
+master.add(dotCreate());
+master.add(resetDots(), "+=4");
+master.add(dotCreate());
 
 });

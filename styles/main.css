@@ -17,7 +17,7 @@ html,body{
 
  .hide {
  	visibility: hidden;
-  /* display: block; */
+  
  }
 
  .red {
@@ -26,6 +26,10 @@ html,body{
 
  .blue {
  	background: blue;
+ }
+
+ .grey{
+
  }
 
 
