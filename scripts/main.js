@@ -115,6 +115,10 @@ $("#button_one").click(function () {
 
 
 
+
+
+
+
 var e = 2.71828183
   // s is number of sick people
 var s = a * e**(t+r);
@@ -123,6 +127,7 @@ var y = 99 - s - v;
 
 
 $(".dot").addClass("hide");
+
 function dotCreate() {
   if (s > 100) {
     alert("Value should be between 1 - 100");
@@ -145,29 +150,74 @@ function dotCreate() {
 		bDot.appendTo(".dot_holder");
 	}
 
-
-
-
 	for (i = 0; i < y; i++) {
 		var greyDot = $("#seed").clone();
 		greyDot.removeClass("hide");
 		greyDot.addClass("grey");
 		greyDot.appendTo(".dot_holder");
 	}
-  return;
+
 }
 }
 
- function resetDots() {
-   var tr = gsap.timeline();
+function resetDots() {
+
    $(".dot.red, .dot.blue, .dot.grey").detach();
-   return tr;
+
  }
 
-var master = gsap.timeline();
+ function increaseTime(){
+   if (y<1) {
+   alert("simulation complete");
+ } else {
+   do {
 
-master.add(dotCreate());
-master.add(resetDots(), "+=4");
-master.add(dotCreate());
+
+     var s = a * e**(t+.01+r);
+     var y = 99 - s - v;
+      for (i = 0; i < s; i++) {
+   		var newDot = $("#seed").clone();
+   		newDot.removeClass("hide");
+   		newDot.addClass("red");
+   		newDot.appendTo(".dot_holder");
+   	}
+
+      for (i = 0; i < v; i++) {
+   		var bDot = $("#seed").clone();
+       bDot.removeClass("hide");
+   		bDot.addClass("blue");
+   		bDot.appendTo(".dot_holder");
+   	}
+
+   	  for (i = 0; i < y; i++) {
+   		var greyDot = $("#seed").clone();
+   		greyDot.removeClass("hide");
+   		greyDot.addClass("grey");
+   		greyDot.appendTo(".dot_holder");
+   	}
+      setTimeout(resetDots, 3000);
+   }
+
+ while (y<1)
+   alert("simulation complete");
+   }
+ }
+
+// dotCreate().onComplete(function resetDots(){
+//
+//     $(".dot.red, .dot.blue, .dot.grey").detach();
+// }
+
+dotCreate();
+
+setTimeout(resetDots, 3000);
+
+setTimeout(increaseTime, 6000);
+
+
+
+
+
+
 
 });
