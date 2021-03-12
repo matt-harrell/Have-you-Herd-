@@ -102,8 +102,9 @@ $("#button_one").click(function () {
 
 
 
-  var t = Number($("#t").val());
+  // var t = Number($("#t").val());
 
+  // var t = 1
   var a = Number($("#a").val());
 
   var r = Number($("#r").val());
@@ -118,47 +119,31 @@ $("#button_one").click(function () {
 
 
 
-
 var e = 2.71828183
   // s is number of sick people
-var s = a * e**(t+r);
-var y = 99 - s - v;
+// var s = a * e**(t+r);
+// var y = 99 - s - v;
 
 
 
 $(".dot").addClass("hide");
 
-function dotCreate() {
-  if (s > 100) {
-    alert("Value should be between 1 - 100");
-    console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a);
+// function dotCreate() {
+//   var s = a * e**(1+t+r);
+//   var y = 99 - s - v;
+//   if (s > 100) {
+//     alert("Value should be between 1 - 100");
+//     console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a);
+//
+//
+// } else {
+//   console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a);
+//
+//
+// }
+// }
 
 
-} else {
-  console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a);
-	for (i = 0; i < s; i++) {
-		var newDot = $("#seed").clone();
-		newDot.removeClass("hide");
-		newDot.addClass("red");
-		newDot.appendTo(".dot_holder");
-	}
-
-  for (i = 0; i < v; i++) {
-		var bDot = $("#seed").clone();
-    bDot.removeClass("hide");
-		bDot.addClass("blue");
-		bDot.appendTo(".dot_holder");
-	}
-
-	for (i = 0; i < y; i++) {
-		var greyDot = $("#seed").clone();
-		greyDot.removeClass("hide");
-		greyDot.addClass("grey");
-		greyDot.appendTo(".dot_holder");
-	}
-
-}
-}
 
 function resetDots() {
 
@@ -167,40 +152,112 @@ function resetDots() {
  }
 
  function increaseTime(){
-   if (y<1) {
-   alert("simulation complete");
- } else {
-   do {
 
+ //   if (y<1) {
+ //   alert("simulation complete1");
+ // } else {
+  var t = 0
 
-     var s = a * e**(t+.01+r);
-     var y = 99 - s - v;
-      for (i = 0; i < s; i++) {
-   		var newDot = $("#seed").clone();
-   		newDot.removeClass("hide");
-   		newDot.addClass("red");
-   		newDot.appendTo(".dot_holder");
-   	}
+ while (t< 3) {
 
-      for (i = 0; i < v; i++) {
-   		var bDot = $("#seed").clone();
+   var s = a * e**(t+r);
+
+   var y = 99 - s - v;
+   function dotsMake() {
+     for (i = 0; i < s; i++) {
+      var newDot = $("#seed").clone();
+      newDot.removeClass("hide");
+      newDot.addClass("red");
+      newDot.appendTo(".dot_holder");
+    }
+
+     for (i = 0; i < v; i++) {
+      var bDot = $("#seed").clone();
        bDot.removeClass("hide");
-   		bDot.addClass("blue");
-   		bDot.appendTo(".dot_holder");
-   	}
+      bDot.addClass("blue");
+      bDot.appendTo(".dot_holder");
+    }
 
-   	  for (i = 0; i < y; i++) {
-   		var greyDot = $("#seed").clone();
-   		greyDot.removeClass("hide");
-   		greyDot.addClass("grey");
-   		greyDot.appendTo(".dot_holder");
-   	}
-      setTimeout(resetDots, 3000);
-   }
+    for (i = 0; i < y; i++) {
+      var greyDot = $("#seed").clone();
+      greyDot.removeClass("hide");
+      greyDot.addClass("grey");
+      greyDot.appendTo(".dot_holder");
+    }
+   } 
+  dotsMake()
+  setTimeout(resetDots,1000);
+  t++;
+  dotsMake();
 
- while (y<1)
-   alert("simulation complete");
-   }
+  console.log("time1="+t);
+  console.log("peopleleft="+y);
+
+
+
+
+
+
+
+
+
+
+ }
+   // while (t<5)  {
+   //
+   //   alert("boo");
+   //    // resetDots();
+   //   // var t = 1
+   //   // var s = a * e**(t+r);
+   //   // var y = 99 - s - v;
+   //   // resetDots();
+   //
+   //     // dotCreate(t<1);
+   //
+   //
+   //    // setTimeout(resetDots,2000);
+   //
+   //    t+.5;
+   //
+   //
+   //
+   //
+   //
+   //
+   //    for (i = 0; i < s; i++) {
+   // 		var newDot = $("#seed").clone();
+   // 		newDot.removeClass("hide");
+   // 		newDot.addClass("red");
+   // 		newDot.appendTo(".dot_holder");
+   // 	}
+   //
+   //    for (i = 0; i < v; i++) {
+   // 		var bDot = $("#seed").clone();
+   //     bDot.removeClass("hide");
+   // 		bDot.addClass("blue");
+   // 		bDot.appendTo(".dot_holder");
+   // 	}
+   //
+   // 	  for (i = 0; i < y; i++) {
+   // 		var greyDot = $("#seed").clone();
+   // 		greyDot.removeClass("hide");
+   // 		greyDot.addClass("grey");
+   // 		greyDot.appendTo(".dot_holder");
+   // 	}
+   //  // console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a);
+   //  // setTimeout(resetDots,2000);
+   //  console.log(t);
+   //  // return t;
+   //  setTimeout(resetDots,1000);
+   //  // console.log("y="+y);
+   //  // console.log("t="+t);
+   //
+   //  }
+
+   // while (y>80);
+
+
+
  }
 
 // dotCreate().onComplete(function resetDots(){
@@ -208,11 +265,13 @@ function resetDots() {
 //     $(".dot.red, .dot.blue, .dot.grey").detach();
 // }
 
-dotCreate();
+// dotCreate();
 
-setTimeout(resetDots, 3000);
+// setTimeout(resetDots,2000);
 
-setTimeout(increaseTime, 6000);
+setTimeout(increaseTime, 1000);
+
+
 
 
 
