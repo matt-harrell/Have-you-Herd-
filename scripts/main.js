@@ -236,9 +236,9 @@ function myLoop() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
 
     let s = a * e**(t+r);
-    let y = 150 - s - v;
+    let y = 100 - s - v;
     if (y < 1) {
-      for (i = 0; i < s; i++) {
+      for (i = 0; i < s + y ; i++) {
     		var newDot = $("#seed").clone();
     		newDot.removeClass("hide");
     		newDot.addClass("red");
@@ -254,13 +254,8 @@ function myLoop() {         //  create a loop function
         // setTimeout(resetBlue,2000);
     	}
 
-    	for (i = 0; i < y; i++) {
-    		var greyDot = $("#seed").clone();
-    		greyDot.removeClass("hide");
-    		greyDot.addClass("grey");
-    		greyDot.appendTo(".dot_holder");
-        // setTimeout(resetGrey,2000);
-    	}
+
+      console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t );
     }else {
       for (i = 0; i < s; i++) {
     		var newDot = $("#seed").clone();
