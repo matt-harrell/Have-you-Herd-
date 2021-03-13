@@ -238,7 +238,7 @@ function myLoop() {         //  create a loop function
     let s = a * e**(t+r);
     let y = 100 - s - v;
     if (y < 1) {
-      for (i = 0; i < s + y ; i++) {
+      for (i = 0; i < s + y; i++) {
     		var newDot = $("#seed").clone();
     		newDot.removeClass("hide");
     		newDot.addClass("red");
