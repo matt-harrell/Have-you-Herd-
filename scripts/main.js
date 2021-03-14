@@ -100,15 +100,17 @@ document.getElementById("v").oninput = function () {
 
 $("#button_one").click(function () {
 
-
+  $("#results").addClass("hide");
+  $(".numberResults").empty();
+  $(".dot.red, .dot.blue,.dot.grey").remove();
 
   // var t = Number($("#t").val());
 
-
+  var d = Number($("#r").val());
 
   var a = Number($("#a").val());
 
-  var r = Number($("#r").val());
+  var r = 1/d;
 
   var v = Number($("#v").val());
 
@@ -228,6 +230,9 @@ while (t < 2) {
 }
 
 
+
+
+
 //  https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop
 // Daniel Vassallo
 var t = 1;                  //  set your counter to 1
@@ -256,6 +261,11 @@ function myLoop() {         //  create a loop function
 
 
       console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t );
+      document.getElementById("dayspast").innerHTML = t;
+      $("#results").removeClass("hide");
+      $('#days_results').html(t);
+      $('#inf_results').html(s+y);
+      $('#vax_results').html(v);
     }else {
       for (i = 0; i < s; i++) {
     		var newDot = $("#seed").clone();
@@ -285,6 +295,8 @@ function myLoop() {         //  create a loop function
 
 
       console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t );  //  your code here
+      document.getElementById("dayspast").innerHTML = t;
+
       t++;
     }
 
@@ -299,42 +311,9 @@ myLoop();
 
 
 
- // function increaseTime(){
- //
- //   // while (y<50) {
- //
- //
- //     // var s = a * e**(t+.01+r);
- //     // var y = 99 - s - v;
- //
- //      dotCreate2();
- //      // setTimeout(resetDots,1000);
- //      // t++;
- //      // setTimeout(dotCreate2,2000);
- //      // console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t );
- //      // setTimeout(resetDots, 3000);
- //      // t++;
- //      // console.log("t="+t);
- //      // setTimeout(resetDots, 3000);
- //      // dotCreate2();
- //   // }
- //
- //
- //
- // }
 
 
 
-// dotCreate().onComplete(function resetDots(){
-//
-//     $(".dot.red, .dot.blue, .dot.grey").detach();
-// }
-
-// dotCreate();
-//
-// setTimeout(resetDots, 2000);
-
-// setTimeout(increaseTime, 1000);
 
 
 

@@ -41,78 +41,50 @@
   </head>
   <body>
     <!-- Add your site or app content here -->
+<h1 class="text-center p-3 exptitle">Infection Simulation</h1>
 
 
 
 
-  <div class="container-md text-center">
 
 
-      <div class="" id="ui">
+  <div class="container-fluid pt-3" id="ui">
 
-      <div class="row">
+      <div class="row text-center m-3 mb-5">
 
-        <!-- <div id="time">
-            <label for="t">Time</label>
-            <input type="number" id="t">
-        </div>
 
-      </div> -->
+         <h4 class=>People currently infected:<span id="aspanscale">1</span></h4>
+         <input  class="mt-3" type="range" min="1" max="5" step="1" value="1" id="a" style="background:none;">
 
-      <div class="row">
-
-       <!-- <div class="range-wrap" style="max-width:720px" id="currentinfected">
-         <label for="a">Current Infected</label>
-         <input type="range" class="range" min="0" max="5">
-         <output class="bubble" id="a"></output> -->
-
-         <input type="range" min="1" max="5" step="1" value="1.0" id="a">
-             Current Infected:<text id="aspanscale" style="inline">1.0</text>
 
         </div>
 
-      </div>
 
-      <div class="row">
+      <div class="row text-center m-3 mb-5">
 
-        <!-- <div id="rval">
-          <label for="r">rate of Infection</label>
-          <input type="number" id="r">
-        </div> -->
 
-        <!-- <div class="range-wrap" style="max-width:720px">
-          <label for="r">Rate of Infection</label>
-          <input type="range" value="1.0" class="range" min="0" max=".99" step=".01">
-          <output class="bubble" id="r"></output>
-        </div> -->
+        <h4>1 New person infected every <span id="rspanscale">1</span> days</h4>
+        <input class="mt-3" type="range" min="1" max="30" step="1" value="1" id="r" style="background:none;">
 
-        <input type="range" min=".01" max=".99" step="0.01" value=".01" id="r">
-            Rate of Infection:<text id="rspanscale" style="inline">.01</text>
 
       </div>
 
-      <div class="row">
+      <div class="row text-center m-3 mb-5">
+        <h4/>Number of persons Vaccinated:<span id="vspanscale">0</span></h4>
+        <input class="mt-3"type="range" min="0" max="99" step="1" value="0" id="v" style="background:none;">
 
-
-        <!-- <div class="range-wrap" style="max-width:720px">
-          <label for="v">Number Vaccinated</label>
-          <input type="range" class="range" min="0" max="99">
-          <output class="bubble" id="v"></output>
-        </div> -->
-
-        <input type="range" min="0" max="99" step="1" value="1.0" id="v">
-            Vaccinated:<text id="vspanscale" style="inline">1.0</text>
 
       </div>
 
-      <button id="button_one">Submit</button>
+      <div class="row m-3 d-flex justify-content-center">
+        <button class="btn btn-primary text-center" id="button_one">Start</button>
+      </div>
+
+  </div>
 
 
-
-
-     </div>
-
-   <div class="d-flex justify-content-center pb-5">
+   <h4 class="text-center">Days that have passed:<span id="dayspast"></span></h4>
+   <div class="d-flex justify-content-center" >
 
      <div class="dot_holder" id="dot_holder" style="max-width: 17em;">
 
@@ -174,5 +146,12 @@
       ga('send', 'pageview');
     </script> -->
     <!-- Built with love using Web Starter Kit -->
+
+   <div class="container text-center hide" style="padding-bottom:5em;" id="results">
+    <h3>Results</h3>
+    <h4>Days Past: <span id="days_results" class="numberResults"em></span></h4>
+    <h4>Total infected: <span id="inf_results" class="numberResults"></span></h4>
+    <h4>Total Vaccinated: <span id="vax_results" class="numberResults"></span></h4>
+   </div>
   </body>
 </html>
