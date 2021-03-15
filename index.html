@@ -41,9 +41,34 @@
   </head>
   <body>
     <!-- Add your site or app content here -->
+
 <h1 class="text-center p-3 exptitle">Infection Simulation</h1>
 
+<section class="container" id="description">
+  <h2 class="text-center">Description</h2>
+  <p>This is a simulation that shows how fast a disease can spread through a population of one hundred people.</p>
 
+  <span class="position-relative">People who are not infected or immune to the disease are represented by:<div class="flex-shrink-0 align-self-end" id="grey_demo"></div></span>
+
+  <p class="pt-3">The persons in this population are represented by these dots.</p>
+
+  <article class="d-flex">
+    <div class="dot_demo red_demo align-self-center"></div>
+    <span class="align-self-center">Number of people who are currently sick.</span>
+  </article>
+  <article class="d-flex">
+    <div class="dot_demo sick_demo align-self-start"></div>
+    <span class="align-self-start" style="padding-top:.23rem;">How fast the disease can spread or the rate.</span>
+  </article>
+  <article class="d-flex">
+    <div class="dot_demo blue_demo align-self-start flex-shrink-0"></div>
+    <span class="align-self-start" style="padding-top:.23rem;">Number of people who are vaccinated and immune to the disease.</span>
+  </article>
+  <p class="pt-3">The simulation uses the continuous exponential growth formula to simulate the spread.
+    This formula is the most commonly used equation for simple disease
+    spreading predictions.
+    </p>
+</section>
 
 
 
@@ -86,9 +111,9 @@
    <h4 class="text-center">Days that have passed:<span id="dayspast"></span></h4>
    <div class="d-flex justify-content-center" >
 
-     <div class="dot_holder" id="dot_holder" style="max-width: 17em;">
+     <div class="dot_holder text-center" id="dot_holder" style="max-width: 16em; position: relative;">
+        <div class="dot hide" id="seed"></div>
 
-	     <section class="dot hide" id="seed"></section>
 
 
 

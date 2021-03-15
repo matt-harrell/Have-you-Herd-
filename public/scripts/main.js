@@ -291,7 +291,7 @@ function myLoop() {         //  create a loop function
         // setTimeout(resetGrey,2000);
     	}
 
-      setTimeout(resetDots,2000);
+      setTimeout(resetDots,1500);
 
 
       console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t );  //  your code here
@@ -304,7 +304,7 @@ function myLoop() {         //  create a loop function
         myLoop();
 
     }
-  }, 2000)
+  }, 1500)
 }
 
 myLoop();

@@ -13,6 +13,23 @@ html,body{
 
  }
 
+#description{
+  text-align: justify;
+  text-justify: inter-word;
+
+
+}
+
+.dot_demo{
+ width: 1em;
+ height: 1em;
+ background: grey;
+ border-radius: 50%;
+ margin: 0.5em;
+ display: inline-block;
+ /* 	border: 1px solid black; */
+}
+
  .dot {
  	width: 1em;
  	height: 1em;
@@ -27,6 +44,7 @@ html,body{
 
  .hide {
  	visibility: hidden;
+  position: absolute;
 
  }
 
@@ -34,12 +52,35 @@ html,body{
  	background: red;
  }
 
+ .red_demo {
+  background: red;
+ }
+
+ .sick_demo {
+   background: #FF5964;
+ }
+
  .blue {
- 	background: blue;
+ 	background: #05B4FF;
+ }
+
+ .blue_demo {
+ 	background: #05B4FF;
  }
 
  .grey{
 
+ }
+
+ #grey_demo{
+   background: grey;
+   width: 1em;
+   height: 1em;
+   background: grey;
+   border-radius: 50%;
+   position: absolute;
+   right: -1.5em;
+   bottom:-.01em
  }
 
 #button_one{
