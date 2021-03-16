@@ -72,6 +72,14 @@ html,body{
 
  }
 
+ .fail{
+   color: red;
+ }
+
+.pass{
+  color: green;
+}
+
  #grey_demo{
    background: grey;
    width: 1em;

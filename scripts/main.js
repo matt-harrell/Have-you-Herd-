@@ -93,15 +93,19 @@ document.getElementById("v").oninput = function () {
 	document.getElementById("vspanscale").innerHTML = this.value;
 };
 
+ var maxv= document.getElementById("v").max.value;
 
+ var maxv2= maxv - a;
+console.log(maxv2);
 
-
-
+// trying to get vaccinated to depend on current infected
 
 $("#button_one").click(function () {
 
   $("#results").addClass("hide");
   $(".numberResults").empty();
+  $("#contStatus").removeClass("pass");
+  $("#contStatus").removeClass("fail");
   $(".dot.red, .dot.blue,.dot.grey").remove();
 
   // var t = Number($("#t").val());
@@ -110,9 +114,21 @@ $("#button_one").click(function () {
 
   var a = Number($("#a").val());
 
-  var r = 1/d;
+  var r = Number(1/d);
 
   var v = Number($("#v").val());
+
+  // number of peope protected
+  var hit = Number(r * 100);
+
+  function hitAchived(){
+    if (v===hit) {
+      s-hit
+    }
+
+  }
+
+  // let y = 99 - s - v - p;
 
 
 
@@ -134,11 +150,11 @@ $(".dot").addClass("hide");
 function dotCreate() {
   if (s > 100) {
     alert("Value should be between 1 - 100");
-    console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a);
+    console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +', p = ' + p);
 
 
 } else {
-  console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a);
+  console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a+', p = ' + p);
 	for (i = 0; i < s; i++) {
 		var newDot = $("#seed").clone();
 		newDot.removeClass("hide");
@@ -152,6 +168,13 @@ function dotCreate() {
 		bDot.addClass("blue");
 		bDot.appendTo(".dot_holder");
 	}
+
+  for (i = 0; i < p; i++) {
+    var protected = $("#seed").clone();
+    protected.removeClass("hide");
+    protected.addClass("grey");
+    protected.appendTo(".dot_holder");
+  }
 
 	for (i = 0; i < y; i++) {
 		var greyDot = $("#seed").clone();
@@ -222,7 +245,7 @@ while (t < 2) {
   setTimeout(resetDots,3000);
 
 
-  console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t );
+  console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', p = ' + p );
   t++;
 
   }
@@ -239,9 +262,47 @@ var t = 1;                  //  set your counter to 1
 
 function myLoop() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+    var s = a * e**(t+r);
+    var y = 100 - s - v;
+    if (v>=hit) {
+      var g = 100 - v - a;
 
-    let s = a * e**(t+r);
-    let y = 100 - s - v;
+      for (i = 0; i < a; i++) {
+    		var bDot = $("#seed").clone();
+        bDot.removeClass("hide");
+    		bDot.addClass("red");
+    		bDot.appendTo(".dot_holder");
+        // setTimeout(resetBlue,2000);
+      }
+
+      for (i = 0; i < v; i++) {
+    		var bDot = $("#seed").clone();
+        bDot.removeClass("hide");
+    		bDot.addClass("blue");
+    		bDot.appendTo(".dot_holder");
+        // setTimeout(resetBlue,2000);
+      }
+
+      for (i = 0; i < g; i++) {
+    		var greyDot = $("#seed").clone();
+    		greyDot.removeClass("hide");
+    		greyDot.addClass("grey");
+    		greyDot.appendTo(".dot_holder");
+        // setTimeout(resetGrey,2000);
+    	}
+
+      console.log('met hit='+hit);
+      document.getElementById("dayspast").innerHTML = t;
+      $('#contStatus').html("Infection contained!").addClass("pass");
+      $("#results").removeClass("hide");
+      $('#days_results').html(t);
+      $('#inf_results').html(s+y);
+      $('#vax_results').html(v);
+      // setTimeout(function(){ alert("HIT was met. Infection containted"); }, 3000);
+      return;
+
+    }
+    console.log("hit was not met");
     if (y < 1) {
       for (i = 0; i < s + y; i++) {
     		var newDot = $("#seed").clone();
@@ -259,13 +320,14 @@ function myLoop() {         //  create a loop function
         // setTimeout(resetBlue,2000);
     	}
 
-
-      console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t );
+      console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit );
       document.getElementById("dayspast").innerHTML = t;
+      $('#contStatus').html("Infection not contained!").addClass("fail");
       $("#results").removeClass("hide");
       $('#days_results').html(t);
       $('#inf_results').html(s+y);
       $('#vax_results').html(v);
+
     }else {
       for (i = 0; i < s; i++) {
     		var newDot = $("#seed").clone();
@@ -281,7 +343,7 @@ function myLoop() {         //  create a loop function
     		bDot.addClass("blue");
     		bDot.appendTo(".dot_holder");
         // setTimeout(resetBlue,2000);
-    	}
+      }
 
     	for (i = 0; i < y; i++) {
     		var greyDot = $("#seed").clone();
@@ -294,7 +356,7 @@ function myLoop() {         //  create a loop function
       setTimeout(resetDots,1500);
 
 
-      console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t );  //  your code here
+      console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit);  //  your code here
       document.getElementById("dayspast").innerHTML = t;
 
       t++;
