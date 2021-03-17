@@ -79,24 +79,51 @@
 
 })();
 
+// document.getElementById("v").max = 100 - Number($("#a").val());
+document.getElementById("vspanscale").innerHTML = Number($("#v").val());
+document.getElementById("aspanscale").innerHTML = Number($("#a").val());
 
+document.getElementById("v").oninput = function () {
+  document.getElementById("v").max = 100 - Number($("#a").val());
+  document.getElementById("vspanscale").innerHTML = Number($("#v").val());
+  };
 
 document.getElementById("a").oninput = function () {
-	document.getElementById("aspanscale").innerHTML = this.value;
+	document.getElementById("aspanscale").innerHTML = Number($("#a").val());
+  document.getElementById("v").max = 100 - Number($("#a").val());
+
+  // console.log($("#vspanscale").val());
+  if (Number($("#aspanscale").val()) + Number($("#vspanscale").val()) > 100) {
+    document.getElementById("vspanscale").innerHTML = 100 - Number($("#a").val());
+    // alert("boo")
+    console.log(Number($("#aspanscale").val()) + Number($("#vspanscale").val()));
+  }
+
+
+
+
+  // if(Number($("#vspanscale").val() + Number($("#aspanscale").val()) > 100){
+     // document.getElementById("vspanscale").innerHTML = this.value;
+     // console.log(v);
+  // }
+
+
+
 };
+
+// need to mess with results reflect this change
 
 document.getElementById("r").oninput = function () {
 	document.getElementById("rspanscale").innerHTML = this.value;
 };
 
-document.getElementById("v").oninput = function () {
-	document.getElementById("vspanscale").innerHTML = this.value;
-};
 
- var maxv= document.getElementById("v").max.value;
 
- var maxv2= maxv - a;
-console.log(maxv2);
+
+
+
+
+
 
 // trying to get vaccinated to depend on current infected
 
@@ -114,21 +141,23 @@ $("#button_one").click(function () {
 
   var a = Number($("#a").val());
 
-  var r = Number(1/d);
+  var r = Number(1/(d/24));
 
   var v = Number($("#v").val());
 
   // number of peope protected
   var hit = Number(r * 100);
 
-  function hitAchived(){
-    if (v===hit) {
-      s-hit
-    }
-
-  }
+  // function hitAchived(){
+  //   if (v===hit) {
+  //     s-hit
+  //   }
+  //
+  // }
 
   // let y = 99 - s - v - p;
+
+
 
 
 
@@ -292,11 +321,12 @@ function myLoop() {         //  create a loop function
     	}
 
       console.log('met hit='+hit);
+      console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit );
       document.getElementById("dayspast").innerHTML = t;
       $('#contStatus').html("Infection contained!").addClass("pass");
       $("#results").removeClass("hide");
       $('#days_results').html(t);
-      $('#inf_results').html(s+y);
+      $('#inf_results').html(a);
       $('#vax_results').html(v);
       // setTimeout(function(){ alert("HIT was met. Infection containted"); }, 3000);
       return;
