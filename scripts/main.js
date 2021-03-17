@@ -79,22 +79,22 @@
 
 })();
 
-// document.getElementById("v").max = 100 - Number($("#a").val());
+// document.getElementById("v").max = 1000 - Number($("#a").val());
 document.getElementById("vspanscale").innerHTML = Number($("#v").val());
 document.getElementById("aspanscale").innerHTML = Number($("#a").val());
 
 document.getElementById("v").oninput = function () {
-  document.getElementById("v").max = 100 - Number($("#a").val());
+  document.getElementById("v").max = 500 - Number($("#a").val());
   document.getElementById("vspanscale").innerHTML = Number($("#v").val());
   };
 
 document.getElementById("a").oninput = function () {
 	document.getElementById("aspanscale").innerHTML = Number($("#a").val());
-  document.getElementById("v").max = 100 - Number($("#a").val());
+  document.getElementById("v").max = 500 - Number($("#a").val());
 
   // console.log($("#vspanscale").val());
-  if (Number($("#aspanscale").val()) + Number($("#vspanscale").val()) > 100) {
-    document.getElementById("vspanscale").innerHTML = 100 - Number($("#a").val());
+  if (Number($("#aspanscale").val()) + Number($("#vspanscale").val()) > 500) {
+    document.getElementById("vspanscale").innerHTML = 500 - Number($("#a").val());
     // alert("boo")
     console.log(Number($("#aspanscale").val()) + Number($("#vspanscale").val()));
   }
@@ -102,7 +102,7 @@ document.getElementById("a").oninput = function () {
 
 
 
-  // if(Number($("#vspanscale").val() + Number($("#aspanscale").val()) > 100){
+  // if(Number($("#vspanscale").val() + Number($("#aspanscale").val()) > 1000){
      // document.getElementById("vspanscale").innerHTML = this.value;
      // console.log(v);
   // }
@@ -118,8 +118,15 @@ document.getElementById("r").oninput = function () {
 };
 
 
+function scroll() {
+  var element = document.getElementById("dayspast");
+  element.scrollIntoView(true, {block: "center"});
+}
 
-
+function scrollResults() {
+  var element = document.getElementById("results");
+  element.scrollIntoView(true, {block: "center"});
+}
 
 
 
@@ -146,7 +153,7 @@ $("#button_one").click(function () {
   var v = Number($("#v").val());
 
   // number of peope protected
-  var hit = Number(r * 100);
+  var hit = Number(r * 500);
 
   // function hitAchived(){
   //   if (v===hit) {
@@ -292,9 +299,9 @@ var t = 1;                  //  set your counter to 1
 function myLoop() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     var s = a * e**(t+r);
-    var y = 100 - s - v;
+    var y = 500 - s - v;
     if (v>=hit) {
-      var g = 100 - v - a;
+      var g = 500 - v - a;
 
       for (i = 0; i < a; i++) {
     		var bDot = $("#seed").clone();
@@ -328,7 +335,7 @@ function myLoop() {         //  create a loop function
       $('#days_results').html(t);
       $('#inf_results').html(a);
       $('#vax_results').html(v);
-      // setTimeout(function(){ alert("HIT was met. Infection containted"); }, 3000);
+      setTimeout(scrollResults,2000);
       return;
 
     }
@@ -400,6 +407,9 @@ function myLoop() {         //  create a loop function
 }
 
 myLoop();
+setTimeout(scroll,1700)
+
+
 
 
 

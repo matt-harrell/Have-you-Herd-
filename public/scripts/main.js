@@ -79,24 +79,58 @@
 
 })();
 
+// document.getElementById("v").max = 1000 - Number($("#a").val());
+document.getElementById("vspanscale").innerHTML = Number($("#v").val());
+document.getElementById("aspanscale").innerHTML = Number($("#a").val());
 
+document.getElementById("v").oninput = function () {
+  document.getElementById("v").max = 500 - Number($("#a").val());
+  document.getElementById("vspanscale").innerHTML = Number($("#v").val());
+  };
 
 document.getElementById("a").oninput = function () {
-	document.getElementById("aspanscale").innerHTML = this.value;
+	document.getElementById("aspanscale").innerHTML = Number($("#a").val());
+  document.getElementById("v").max = 500 - Number($("#a").val());
+
+  // console.log($("#vspanscale").val());
+  if (Number($("#aspanscale").val()) + Number($("#vspanscale").val()) > 500) {
+    document.getElementById("vspanscale").innerHTML = 500 - Number($("#a").val());
+    // alert("boo")
+    console.log(Number($("#aspanscale").val()) + Number($("#vspanscale").val()));
+  }
+
+
+
+
+  // if(Number($("#vspanscale").val() + Number($("#aspanscale").val()) > 1000){
+     // document.getElementById("vspanscale").innerHTML = this.value;
+     // console.log(v);
+  // }
+
+
+
 };
+
+// need to mess with results reflect this change
 
 document.getElementById("r").oninput = function () {
 	document.getElementById("rspanscale").innerHTML = this.value;
 };
 
-document.getElementById("v").oninput = function () {
-	document.getElementById("vspanscale").innerHTML = this.value;
-};
 
- var maxv= document.getElementById("v").max.value;
+function scroll() {
+  var element = document.getElementById("dayspast");
+  element.scrollIntoView(true, {block: "center"});
+}
 
- var maxv2= maxv - a;
-console.log(maxv2);
+function scrollResults() {
+  var element = document.getElementById("results");
+  element.scrollIntoView(true, {block: "center"});
+}
+
+
+
+
 
 // trying to get vaccinated to depend on current infected
 
@@ -114,21 +148,23 @@ $("#button_one").click(function () {
 
   var a = Number($("#a").val());
 
-  var r = Number(1/d);
+  var r = Number(1/(d/24));
 
   var v = Number($("#v").val());
 
   // number of peope protected
-  var hit = Number(r * 100);
+  var hit = Number(r * 500);
 
-  function hitAchived(){
-    if (v===hit) {
-      s-hit
-    }
-
-  }
+  // function hitAchived(){
+  //   if (v===hit) {
+  //     s-hit
+  //   }
+  //
+  // }
 
   // let y = 99 - s - v - p;
+
+
 
 
 
@@ -263,9 +299,9 @@ var t = 1;                  //  set your counter to 1
 function myLoop() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     var s = a * e**(t+r);
-    var y = 100 - s - v;
+    var y = 500 - s - v;
     if (v>=hit) {
-      var g = 100 - v - a;
+      var g = 500 - v - a;
 
       for (i = 0; i < a; i++) {
     		var bDot = $("#seed").clone();
@@ -292,13 +328,14 @@ function myLoop() {         //  create a loop function
     	}
 
       console.log('met hit='+hit);
+      console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit );
       document.getElementById("dayspast").innerHTML = t;
       $('#contStatus').html("Infection contained!").addClass("pass");
       $("#results").removeClass("hide");
       $('#days_results').html(t);
-      $('#inf_results').html(s+y);
+      $('#inf_results').html(a);
       $('#vax_results').html(v);
-      // setTimeout(function(){ alert("HIT was met. Infection containted"); }, 3000);
+      setTimeout(scrollResults,2000);
       return;
 
     }
@@ -370,6 +407,9 @@ function myLoop() {         //  create a loop function
 }
 
 myLoop();
+setTimeout(scroll,1700)
+
+
 
 
 

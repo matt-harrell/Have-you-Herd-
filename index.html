@@ -107,16 +107,25 @@
   </div>
 
 
-   <h4 class="text-center">Days that have passed:<span id="dayspast"></span></h4>
-   <div class="d-flex justify-content-center" >
+  <h4 class="text-center">Days that have passed:<span id="dayspast"></span></h4>
 
-     <div class="dot_holder text-center" id="dot_holder" style="max-width: 16em; position: relative;">
+  <div class="d-flex justify-content-center">
+
+     <div class="dot_holder text-center" id="dot_holder" style="max-width: 90%; position: relative;">
         <div class="dot hide" id="seed"></div>
 
 
 
 
       </div>
+    </div>
+    <div id=scrollTarget></div>
+    <div class="container text-center hide" style="padding-bottom:5em;" id="results">
+     <h2 id="contStatus"><h2>
+     <h3>Results</h3>
+     <h4>Days Past: <span id="days_results" class="numberResults"em></span></h4>
+     <h4>Total infected: <span id="inf_results" class="numberResults"></span></h4>
+     <h4>Total Vaccinated: <span id="vax_results" class="numberResults"></span></h4>
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-light  fixed-bottom d-flex flex-nowrap justify-content-around p-0" style="max-height: 20%;background:#B2C6E4">
@@ -171,12 +180,6 @@
     </script> -->
     <!-- Built with love using Web Starter Kit -->
 
-   <div class="container text-center hide" style="padding-bottom:5em;" id="results">
-    <h2 id="contStatus"><h2>
-    <h3>Results</h3>
-    <h4>Days Past: <span id="days_results" class="numberResults"em></span></h4>
-    <h4>Total infected: <span id="inf_results" class="numberResults"></span></h4>
-    <h4>Total Vaccinated: <span id="vax_results" class="numberResults"></span></h4>
-   </div>
+
   </body>
 </html>
