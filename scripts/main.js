@@ -148,12 +148,14 @@ $("#button_one").click(function () {
 
   var a = Number($("#a").val());
 
-  var r = Number(1/(d/24));
+  // var r = Number(1/(d/24));
+  var r = Number(1/d);
 
   var v = Number($("#v").val());
 
   // number of peope protected
-  var hit = Number(r * 500);
+  // var hit = Number(r * 500);
+  var hit = (1 - r) * 500;
 
   // function hitAchived(){
   //   if (v===hit) {
