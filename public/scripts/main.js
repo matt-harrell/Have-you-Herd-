@@ -144,16 +144,20 @@ $("#button_one").click(function () {
 
   // var t = Number($("#t").val());
 
-  var d = Number($("#r").val());
+  // var d = Number($("#r").val());
+  var r = Number($("#r").val());
 
   var a = Number($("#a").val());
 
-  var r = Number(1/(d/24));
+  // var r = Number(1/(d/24));
+  // var r = Number(1/d);
+  // var r = Number(d/24);
 
   var v = Number($("#v").val());
 
   // number of peope protected
-  var hit = Number(r * 500);
+  // var hit = Number(r * 500);
+  var hit = (1 - (1/r)) * 500;
 
   // function hitAchived(){
   //   if (v===hit) {
@@ -294,12 +298,58 @@ while (t < 2) {
 
 //  https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop
 // Daniel Vassallo
-var t = 1;                  //  set your counter to 1
+var t = 0;                  //  set your counter to 1
+
+function begin() {
+  console.log("time is zero");
+
+
+    var g = 500 - v - a;
+
+    for (i = 0; i < a; i++) {
+      var bDot = $("#seed").clone();
+      bDot.removeClass("hide");
+      bDot.addClass("red");
+      bDot.appendTo(".dot_holder");
+      // setTimeout(resetBlue,2000);
+    }
+
+    for (i = 0; i < v; i++) {
+      var bDot = $("#seed").clone();
+      bDot.removeClass("hide");
+      bDot.addClass("blue");
+      bDot.appendTo(".dot_holder");
+      // setTimeout(resetBlue,2000);
+    }
+
+    for (i = 0; i < g; i++) {
+      var greyDot = $("#seed").clone();
+      greyDot.removeClass("hide");
+      greyDot.addClass("grey");
+      greyDot.appendTo(".dot_holder");
+      // setTimeout(resetGrey,2000);
+    }
+
+
+
+
+    document.getElementById("dayspast").innerHTML = t;
+    t++;
+  }
+
+var one = 1
 
 function myLoop() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
-    var s = a * e**(t+r);
-    var y = 500 - s - v;
+    // var rOne = (1+(1/r))
+    // var s = parseInt(a * e**(t+rOne));
+    var s = parseInt(a * (r)**t);
+    // var aTwo = parseInt(a + s);
+    // var sTwo = parseInt(aTwo * (one+r)**t);
+    var y = parseInt(500 - s - v);
+    // var sTotal = sTwo + aTwo;
+
+
     if (v>=hit) {
       var g = 500 - v - a;
 
@@ -357,7 +407,7 @@ function myLoop() {         //  create a loop function
         // setTimeout(resetBlue,2000);
     	}
 
-      console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit );
+      console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit);
       document.getElementById("dayspast").innerHTML = t;
       $('#contStatus').html("Infection not contained!").addClass("fail");
       $("#results").removeClass("hide");
@@ -366,12 +416,14 @@ function myLoop() {         //  create a loop function
       $('#vax_results').html(v);
 
     }else {
+      // setTimeout(resetDots,1500);
       for (i = 0; i < s; i++) {
     		var newDot = $("#seed").clone();
     		newDot.removeClass("hide");
     		newDot.addClass("red");
     		newDot.appendTo(".dot_holder");
         // setTimeout(resetRed,2000);
+
     	}
 
       for (i = 0; i < v; i++) {
@@ -397,6 +449,8 @@ function myLoop() {         //  create a loop function
       document.getElementById("dayspast").innerHTML = t;
 
       t++;
+      var newTotal = s + a;
+      console.log("new total=" + newTotal);
     }
 
     if ( y > 1) {
@@ -406,8 +460,11 @@ function myLoop() {         //  create a loop function
   }, 1500)
 }
 
-myLoop();
-setTimeout(scroll,1700)
+begin();
+setTimeout(scroll);
+setTimeout(resetDots,1500);
+setTimeout(myLoop);
+
 
 
 
