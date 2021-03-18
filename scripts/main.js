@@ -299,7 +299,7 @@ while (t < 2) {
 //  https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop
 // Daniel Vassallo
 var t = 0;                  //  set your counter to 1
-
+var newA = [];
 function begin() {
   console.log("time is zero");
 
@@ -415,48 +415,131 @@ function myLoop() {         //  create a loop function
       $('#inf_results').html(s+y);
       $('#vax_results').html(v);
 
-    }else {
-      // setTimeout(resetDots,1500);
-      for (i = 0; i < s; i++) {
-    		var newDot = $("#seed").clone();
-    		newDot.removeClass("hide");
-    		newDot.addClass("red");
-    		newDot.appendTo(".dot_holder");
-        // setTimeout(resetRed,2000);
-
-    	}
-
-      for (i = 0; i < v; i++) {
-    		var bDot = $("#seed").clone();
-        bDot.removeClass("hide");
-    		bDot.addClass("blue");
-    		bDot.appendTo(".dot_holder");
-        // setTimeout(resetBlue,2000);
-      }
-
-    	for (i = 0; i < y; i++) {
-    		var greyDot = $("#seed").clone();
-    		greyDot.removeClass("hide");
-    		greyDot.addClass("grey");
-    		greyDot.appendTo(".dot_holder");
-        // setTimeout(resetGrey,2000);
-    	}
-
-      setTimeout(resetDots,1500);
-
-
-      console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit);  //  your code here
-      document.getElementById("dayspast").innerHTML = t;
-
-      t++;
-      var newTotal = s + a;
-      console.log("new total=" + newTotal);
     }
+    // else {
+    //   // setTimeout(resetDots,1500);
+    //   for (i = 0; i < s; i++) {
+    // 		var newDot = $("#seed").clone();
+    // 		newDot.removeClass("hide");
+    // 		newDot.addClass("red");
+    // 		newDot.appendTo(".dot_holder");
+    //     // setTimeout(resetRed,2000);
+    //
+    // 	}
+    //
+    //   for (i = 0; i < v; i++) {
+    // 		var bDot = $("#seed").clone();
+    //     bDot.removeClass("hide");
+    // 		bDot.addClass("blue");
+    // 		bDot.appendTo(".dot_holder");
+    //     // setTimeout(resetBlue,2000);
+    //   }
+    //
+    // 	for (i = 0; i < y; i++) {
+    // 		var greyDot = $("#seed").clone();
+    // 		greyDot.removeClass("hide");
+    // 		greyDot.addClass("grey");
+    // 		greyDot.appendTo(".dot_holder");
+    //     // setTimeout(resetGrey,2000);
+    // 	}
+    //
+    //   setTimeout(resetDots,1500);
+    //
+    //
+    //   console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit);  //  your code here
+    //   document.getElementById("dayspast").innerHTML = t;
+    //
+    //   t++;
+    //   var newTotal = s + a;
+    //   console.log("new total=" + newTotal);
+    // }
 
     if ( y > 1) {
-        myLoop();
+
+        if (t == 1) {
+          for (i = 0; i < s; i++) {
+            var newDot = $("#seed").clone();
+            newDot.removeClass("hide");
+            newDot.addClass("red");
+            newDot.appendTo(".dot_holder");
+            // setTimeout(resetRed,2000);
+
+          }
+
+          for (i = 0; i < v; i++) {
+            var bDot = $("#seed").clone();
+            bDot.removeClass("hide");
+            bDot.addClass("blue");
+            bDot.appendTo(".dot_holder");
+            // setTimeout(resetBlue,2000);
+          }
+
+          for (i = 0; i < y; i++) {
+            var greyDot = $("#seed").clone();
+            greyDot.removeClass("hide");
+            greyDot.addClass("grey");
+            greyDot.appendTo(".dot_holder");
+            // setTimeout(resetGrey,2000);
+          }
+
+          setTimeout(resetDots,1500);
+
+
+          console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit);  //  your code here
+          document.getElementById("dayspast").innerHTML = t;
+
+          t++;
+          newA.push(Number(s));
+          console.log("newA=" + newA[0]);
+            myLoop();
+        } else {
+          // var newS = newA.length+t-1;
+          console.log("t is more 1");
+          for (i = 0; i < newA; i++) {
+            var newDot = $("#seed").clone();
+            newDot.removeClass("hide");
+            newDot.addClass("red");
+            newDot.appendTo(".dot_holder");
+            // setTimeout(resetRed,2000);
+
+          }
+
+          for (i = 0; i < v; i++) {
+            var bDot = $("#seed").clone();
+            bDot.removeClass("hide");
+            bDot.addClass("blue");
+            bDot.appendTo(".dot_holder");
+            // setTimeout(resetBlue,2000);
+          }
+
+          for (i = 0; i < y; i++) {
+            var greyDot = $("#seed").clone();
+            greyDot.removeClass("hide");
+            greyDot.addClass("grey");
+            greyDot.appendTo(".dot_holder");
+            // setTimeout(resetGrey,2000);
+          }
+
+          setTimeout(resetDots,1500);
+
+
+          console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit);  //  your code here
+          document.getElementById("dayspast").innerHTML = t;
+          console.log("newA=" + newA[t.value]);
+          t++;
+
+          // newA.push(newS);
+          // console.log("newS=" + newS);
+
+          myLoop();
+        }
+        // if (t >= 2) {
+        //   setTimeout(alert("next"), 2000);
+        // };
+
 
     }
+
   }, 1500)
 }
 
