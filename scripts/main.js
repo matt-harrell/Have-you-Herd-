@@ -493,9 +493,9 @@ function myLoop() {         //  create a loop function
           console.log("newA=" + newA[0]);
             myLoop();
         } else {
-          // var newS = newA.length+t-1;
+          var newS = newA[t]; // this needs to call the object in the array eqaul to time. if t=1 it would call the first array value
           console.log("t is more 1");
-          for (i = 0; i < newA; i++) {
+          for (i = 0; i < newS; i++) {
             var newDot = $("#seed").clone();
             newDot.removeClass("hide");
             newDot.addClass("red");
@@ -522,10 +522,10 @@ function myLoop() {         //  create a loop function
 
           setTimeout(resetDots,1500);
 
-
+          newA.push(newS); // newS value to the array
           console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit);  //  your code here
           document.getElementById("dayspast").innerHTML = t;
-          console.log("newA=" + newA[t.value]);
+          console.log("newS =" + newS); // this number should be increasing
           t++;
 
           // newA.push(newS);
