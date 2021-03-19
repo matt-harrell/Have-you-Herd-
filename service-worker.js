@@ -28,7 +28,7 @@ const PRECACHE_URLS = [
   'index.html',
   './', // Alias for index.html
   'styles/main.css',
-  'scripts/main.js'
+  'scripts/main.js',
   'error.html'
 ];
 
