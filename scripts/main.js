@@ -346,8 +346,11 @@ function myLoop() {         //  create a loop function
     var s = parseInt(a * (r)**t);
     // var aTwo = parseInt(a + s);
     // var sTwo = parseInt(aTwo * (one+r)**t);
-    var y = parseInt(500 - s - v);
+    var y = 500 - s - v;
     // var sTotal = sTwo + aTwo;
+    var currentA = newA[newA.length - 1]; // this needs to call the object in the array eqaul to time. if t=1 it would call the first array value
+    var newS = parseInt(currentA * (r)**t);
+    var newY = 500 - newS - v;
 
 
     if (v>=hit) {
@@ -390,8 +393,8 @@ function myLoop() {         //  create a loop function
 
     }
     console.log("hit was not met");
-    if (y < 1) {
-      for (i = 0; i < s + y; i++) {
+    if (newY < 1) {
+      for (i = 0; i < newS + newY; i++) {
     		var newDot = $("#seed").clone();
     		newDot.removeClass("hide");
     		newDot.addClass("red");
@@ -409,53 +412,18 @@ function myLoop() {         //  create a loop function
 
       console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit);
       document.getElementById("dayspast").innerHTML = t;
+      console.log("NewA="+newA+ ",NewS="+newS);
       $('#contStatus').html("Infection not contained!").addClass("fail");
       $("#results").removeClass("hide");
       $('#days_results').html(t);
       $('#inf_results').html(s+y);
       $('#vax_results').html(v);
+      return;
 
     }
-    // else {
-    //   // setTimeout(resetDots,1500);
-    //   for (i = 0; i < s; i++) {
-    // 		var newDot = $("#seed").clone();
-    // 		newDot.removeClass("hide");
-    // 		newDot.addClass("red");
-    // 		newDot.appendTo(".dot_holder");
-    //     // setTimeout(resetRed,2000);
-    //
-    // 	}
-    //
-    //   for (i = 0; i < v; i++) {
-    // 		var bDot = $("#seed").clone();
-    //     bDot.removeClass("hide");
-    // 		bDot.addClass("blue");
-    // 		bDot.appendTo(".dot_holder");
-    //     // setTimeout(resetBlue,2000);
-    //   }
-    //
-    // 	for (i = 0; i < y; i++) {
-    // 		var greyDot = $("#seed").clone();
-    // 		greyDot.removeClass("hide");
-    // 		greyDot.addClass("grey");
-    // 		greyDot.appendTo(".dot_holder");
-    //     // setTimeout(resetGrey,2000);
-    // 	}
-    //
-    //   setTimeout(resetDots,1500);
-    //
-    //
-    //   console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit);  //  your code here
-    //   document.getElementById("dayspast").innerHTML = t;
-    //
-    //   t++;
-    //   var newTotal = s + a;
-    //   console.log("new total=" + newTotal);
-    // }
 
-    if ( y > 1) {
 
+    if ( y > 1 || newY > 1) {
         if (t == 1) {
           for (i = 0; i < s; i++) {
             var newDot = $("#seed").clone();
@@ -493,7 +461,7 @@ function myLoop() {         //  create a loop function
           console.log("newA=" + newA[0]);
             myLoop();
         } else {
-          var newS = newA[t]; // this needs to call the object in the array eqaul to time. if t=1 it would call the first array value
+
           console.log("t is more 1");
           for (i = 0; i < newS; i++) {
             var newDot = $("#seed").clone();
@@ -512,7 +480,7 @@ function myLoop() {         //  create a loop function
             // setTimeout(resetBlue,2000);
           }
 
-          for (i = 0; i < y; i++) {
+          for (i = 0; i < newY; i++) {
             var greyDot = $("#seed").clone();
             greyDot.removeClass("hide");
             greyDot.addClass("grey");
@@ -525,7 +493,10 @@ function myLoop() {         //  create a loop function
           newA.push(newS); // newS value to the array
           console.log('s = ' + s + ', v = ' + v + ', r = ' + r + ', y = ' + y +', a = ' + a +',t =' + t+', hit = ' + hit);  //  your code here
           document.getElementById("dayspast").innerHTML = t;
+          console.log(newA);
+          console.log("newY=" + newY);
           console.log("newS =" + newS); // this number should be increasing
+          console.log();
           t++;
 
           // newA.push(newS);
