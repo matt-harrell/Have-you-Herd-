@@ -362,9 +362,10 @@ function myLoop() {
 }
 
 begin();
-setTimeout(scroll);
+scroll();
 setTimeout(resetDots,1500);
 setTimeout(myLoop);
+scrollResults();
 
 
 
