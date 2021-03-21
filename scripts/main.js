@@ -80,6 +80,7 @@
 })();
 
 
+
 document.getElementById("vspanscale").innerHTML = Number($("#v").val());
 document.getElementById("aspanscale").innerHTML = Number($("#a").val());
 
