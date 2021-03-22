@@ -79,6 +79,37 @@
 
 })();
 
+
+
 $("#back_button").click(function () {
   window.history.back();
 });
+
+
+$("#vaxbtn").click( function () {
+  var element = document.getElementById("vaxherdexp");
+  element.scrollIntoView(true, {block: "center"});
+
+})
+
+$("#broadbtn").click( function () {
+  var element = document.getElementById("broadherdexp");
+  element.scrollIntoView(true, {block: "center"});
+
+})
+
+// trying to get next button to appear if both buttons are clicked 
+
+$("#vaxbtn").click(function(){
+    $(this).data('clicked', true);
+    console.log("yes");
+});
+
+
+// $("#broadbtn").click(function(){
+//     $(this).data('clicked', true);
+// });
+
+if($('#vaxbtn').data('clicked')) {
+    console.log("got it");
+}

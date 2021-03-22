@@ -1,6 +1,7 @@
 html,body{
   height: 100%;
-  background: #A5C6E4;
+  /* background: #A5C6E4; */
+  /* background:#F2F2F2; */
   font-family: 'Roboto', sans-serif;
 }
  img{
@@ -13,6 +14,15 @@ html,body{
   font-family: 'Luckiest Guy', cursive;
   letter-spacing: 3px;
   font-size: 6em;
+}
+
+.sub_title{
+  font-size: 3em;
+  color:white;
+  text-shadow: 1px 1px 5px black;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 3px;
+
 }
 
 .start_nav_buttons{
@@ -36,13 +46,23 @@ html,body{
 }
 
  .exptitle{
-   background:#A5C6E4;
+
    color:white;
    text-shadow: 1px 1px 5px black;
    font-family: 'Luckiest Guy', cursive;
    letter-spacing: 3px;
 
  }
+
+.herd_svg{
+ max-width: 10em;
+}
+
+#broad_svg{
+  max-width: 20em;
+}
+
+
 
 #description{
   text-align: justify;
