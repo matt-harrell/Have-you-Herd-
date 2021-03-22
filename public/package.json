@@ -1,0 +1,19 @@
+{
+  "name": "have_you_herd",
+  "version": "1.0.0",
+  "description": "pwa capstone ",
+  "main": "scripts/sw/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mharrell8/Have-you-Herd-.git"
+  },
+  "author": "Matt Harrell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mharrell8/Have-you-Herd-/issues"
+  },
+  "homepage": "https://github.com/mharrell8/Have-you-Herd-#readme"
+}

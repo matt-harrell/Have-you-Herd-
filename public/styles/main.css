@@ -1,22 +1,68 @@
 html,body{
   height: 100%;
-  background: #F2F2F2;
+  /* background: #A5C6E4; */
+  /* background:#F2F2F2; */
   font-family: 'Roboto', sans-serif;
 }
  img{
    width: 100%
  }
 
+.main_title{
+  color:white;
+  text-shadow: 1px 1px 5px black;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 3px;
+  font-size: 6em;
+}
 
+.sub_title{
+  font-size: 3em;
+  color:white;
+  text-shadow: 1px 1px 5px black;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 3px;
+
+}
+
+.start_nav_buttons{
+  /* background: #B2C6E4;
+  outline: #B2C6E4; */
+  font-size: 5em;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0px 0px 5px black;
+
+}
+
+.nav_buttons{
+  /* background: #B2C6E4;
+  outline: #B2C6E4; */
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0px 0px 5px black;
+  width:95%;
+  height: 30vh;
+  font-size:2.5rem;
+
+}
 
  .exptitle{
-   background:#B2C6E4;
+
    color:white;
    text-shadow: 1px 1px 5px black;
    font-family: 'Luckiest Guy', cursive;
    letter-spacing: 3px;
 
  }
+
+.herd_svg{
+ max-width: 10em;
+}
+
+#broad_svg{
+  max-width: 20em;
+}
+
+
 
 #description{
   text-align: justify;
