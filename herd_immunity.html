@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HIT Value</title>
     <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="custom.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -55,11 +55,11 @@
       <h2 class="exptitle text-center">There are two types</h2>
 
 
-      <div class="d-grid gap-2 pt-3 pb-5 m-2" style="background: #A5C6E4;">
+      <div class="d-grid gap-2 pt-3 pb-1 m-2" style="background: #A5C6E4;">
 
 
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#vaxherd" aria-expanded="false" aria-controls="collapseExample" id="vaxbtn">
-              <h3 class="pb-2">Vaccinatations</h3>
+            <button class="btn btn-primary herd_buttons" type="button" data-bs-toggle="collapse" data-bs-target="#vaxherd" aria-expanded="false" aria-controls="collapseExample" id="vaxbtn">
+              <h3 class="pb-2 herd_txt">Vaccinatations</h3>
               <div class="mx-auto d-flex justify-content-center flex-shrink-1 herd_svg">
                 <svg xmlns="http://www.w3.org/2000/svg"   max-width="100%" max-height="100%" viewBox="0 0 200 200">
 
@@ -87,8 +87,8 @@
                 </div>
               </div>
 
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#infherd" aria-expanded="false" aria-controls="collapseExample" id="broadbtn">
-              <h3 class="pb-2">Broad Infection</h3>
+            <button class="btn btn-primary herd_buttons" type="button" data-bs-toggle="collapse" data-bs-target="#infherd" aria-expanded="false" aria-controls="collapseExample" id="broadbtn">
+              <h3 class="pb-2 herd_txt">Broad Infection</h3>
               <div class="mx-auto d-flex justify-content-center flex-shrink-1" id="broad_svg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="90%" height="90%" viewBox="0 0 300 150" class="p-0">
 
@@ -158,8 +158,8 @@
                   </div>
                 </div>
 
-            <div class="pt-2 d-grid gap-2 hidebutton" id="nextherd">
-                <button class="btn btn-primary pt-3 pb-3" type="button" href="nav.html"><h3>Next</h3></button>
+            <div class="pt-2 d-grid gap-2 hidebutton herd_buttons" id="nextherd">
+                <button class="btn btn-primary pt-3 pb-3" type="button" onclick="window.location.href='nav.html'"><h3 class="herd_txt">Next</h3></button>
             </div>
 
       </div>

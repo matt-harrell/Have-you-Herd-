@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mharrell8/Have-you-Herd-/issues"
   },
-  "homepage": "https://github.com/mharrell8/Have-you-Herd-#readme"
+  "homepage": "https://github.com/mharrell8/Have-you-Herd-#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta2"
+  }
 }
