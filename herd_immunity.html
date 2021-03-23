@@ -42,15 +42,20 @@
     <link rel="canonical" href="http://www.example.com/">
     -->
   </head>
-<body style="background:#A5C6E4;">
+<body style="background:#F2F2F2;">
     <!-- Add your site or app content here -->
-    <h1 class="sub_title text-center">What is Herd Immunity?</h1>
-    <h2 class="exptitle text-center">There are two types</h2>
-    <div class="container" style="padding-bottom:10em;">
+    <h1 class="sub_title text-center" style="background:#A5C6E4;">What is Herd Immunity?</h1>
+    <p class="herd_description m-3 p-3">Herd immunity is when a portion of the population is immune to a disease and their immunity helps
+      protect others who are not immune to the same disease. This specific threshold that has to be reached
+      in order to protect the people in the population who are not immune to the disease
+      is called the herd immunity threshold.
+    </p>
+
+    <div class="container-fuild pt-3" style="padding-bottom:10em; background:#A5C6E4;">
+      <h2 class="exptitle text-center">There are two types</h2>
 
 
-
-      <div class="d-grid gap-2 pt-3 pb-5" style="background: #A5C6E4;">
+      <div class="d-grid gap-2 pt-3 pb-5 m-2" style="background: #A5C6E4;">
 
 
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#vaxherd" aria-expanded="false" aria-controls="collapseExample" id="vaxbtn">
@@ -75,62 +80,87 @@
 
               <div class="collapse" id="vaxherd">
                 <div class="card card-body" id="vaxherdexp">
-                  Vax herd Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                  <p class="herd_description">Vaccines provide a way to make large portions of the population immune to the disease. However, not everyone can get vaccines.
+                    Newborns or people who have a very weak immune system from a genetic disorder, cancer or some other complication cannot get vaccines.
+                    This is why they rely on others to get vaccines and create herd immunity to protect them.
+                  </p>
                 </div>
               </div>
 
-              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#infherd" aria-expanded="false" aria-controls="collapseExample" id="broadbtn">
-                <h3 class="pb-2">Broad Infection</h3>
-                <div class="mx-auto d-flex justify-content-center flex-shrink-1" id="broad_svg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="90%" height="90%" viewBox="0 0 300 150" class="p-0">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#infherd" aria-expanded="false" aria-controls="collapseExample" id="broadbtn">
+              <h3 class="pb-2">Broad Infection</h3>
+              <div class="mx-auto d-flex justify-content-center flex-shrink-1" id="broad_svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="90%" height="90%" viewBox="0 0 300 150" class="p-0">
 
 
 
-                          <circle cx="145.83" cy="20.83" r="20.83" fill="#f21d2f"/>
-                          <circle cx="104.17" cy="63.77" r="20.83" fill="#f21d2f"/>
-                          <circle cx="187.5" cy="63.77" r="20.83" fill="#f21d2f"/>
-                          <circle cx="186.74" cy="127.53" r="20.83" fill="#f21d2f"/>
-                          <circle cx="270.83" cy="128.41" r="20.83" fill="#f21d2f"/>
-                          <circle cx="104.17" cy="127.53" r="20.83" fill="#f21d2f"/>
-                          <circle cx="20.83" cy="127.53" r="20.83" fill="#f21d2f"/>
-                          <g id="_9nKCT7" data-name="9nKCT7">
-                            <path d="M102.5,98.31l.14-8.76h2.47L105,98.16l4.12-4.25.11.1,0,0c0,.93,0,1.86,0,2.8a.47.47,0,0,1-.14.29l-5.38,5.39s0,0-.13.06l-1.88-1.93c-1.09-1.09-2.18-2.16-3.26-3.26a.73.73,0,0,1-.19-.47c0-.9,0-1.8,0-2.7l.11,0Z"/>
-                          </g>
-                          <g id="_9nKCT7-2" data-name="9nKCT7">
-                            <path d="M43.94,102.66l6.29-6.09L52,98.31l-6.19,6,5.92-.09v.15s0,0,0,.06c-.66.66-1.32,1.32-2,2a.51.51,0,0,1-.31.11H41.8l-.13,0c0-.88,0-1.79,0-2.69,0-1.54,0-3.07,0-4.61a.75.75,0,0,1,.19-.47c.62-.65,1.27-1.28,1.9-1.91l.11,0Z"/>
-                          </g>
-                          <g id="_9nKCT7-3" data-name="9nKCT7">
-                            <path d="M60.85,85.75l6.29-6.09,1.74,1.74-6.18,6,5.92-.08v.15l0,0-2,2a.47.47,0,0,1-.31.11H58.72l-.14,0c0-.88,0-1.79,0-2.7,0-1.53,0-3.07,0-4.6a.69.69,0,0,1,.2-.47c.62-.65,1.26-1.28,1.9-1.92l.11.05Z"/>
-                          </g>
-                          <g id="_9nKCT7-4" data-name="9nKCT7">
-                            <path d="M246.08,104.23,240,98l1.74-1.75,6,6.19-.09-5.92h.15s.05,0,.06,0c.66.66,1.32,1.32,2,2a.45.45,0,0,1,.1.3q0,3.81,0,7.62a.44.44,0,0,1,0,.13c-.88,0-1.79,0-2.69,0-1.54,0-3.07,0-4.61,0a.75.75,0,0,1-.47-.19c-.65-.62-1.28-1.26-1.91-1.9l.05-.11Z"/>
-                          </g>
-                          <g id="_9nKCT7-5" data-name="9nKCT7">
-                            <path d="M229.17,87.32,223.07,81l1.75-1.74,6,6.18-.09-5.92h.15s.06,0,.06,0c.66.66,1.32,1.32,2,2a.47.47,0,0,1,.11.31q0,3.81,0,7.61s0,0,0,.14l-2.7,0c-1.53,0-3.07,0-4.6,0a.74.74,0,0,1-.48-.2c-.64-.62-1.27-1.26-1.91-1.9l0-.11Z"/>
-                          </g>
-                          <g id="_9nKCT7-6" data-name="9nKCT7">
-                            <path d="M168,45.81l-6.09-6.29,1.74-1.74,6,6.18L169.53,38h.15s0,0,.06,0c.66.66,1.32,1.32,2,2a.49.49,0,0,1,.11.31q0,3.81,0,7.62a.44.44,0,0,1,0,.13c-.88,0-1.79,0-2.7,0h-4.6a.73.73,0,0,1-.47-.19c-.65-.62-1.28-1.27-1.92-1.9l.06-.12Z"/>
-                          </g>
-                          <g id="_9nKCT7-7" data-name="9nKCT7">
-                            <path d="M123,44.06,129.25,38,131,39.71l-6.19,6,5.92-.09v.15s0,.05,0,.06c-.66.65-1.32,1.31-2,2a.47.47,0,0,1-.31.11h-7.61l-.13,0c0-.88,0-1.79,0-2.7,0-1.53,0-3.07,0-4.6a.73.73,0,0,1,.19-.47c.62-.65,1.26-1.28,1.9-1.92l.11.05Z"/>
-                          </g>
-                          <g id="_9nKCT7-8" data-name="9nKCT7">
-                            <path d="M186.68,98.31l.14-8.75h2.47l-.14,8.6,4.12-4.25.11.11.05,0c0,.93,0,1.87,0,2.8a.52.52,0,0,1-.14.3l-5.38,5.38s0,0-.13.06l-1.89-1.93c-1.08-1.08-2.17-2.16-3.25-3.26a.73.73,0,0,1-.19-.47c0-.9,0-1.79,0-2.69l.11,0Z"/>
-                          </g>
+                        <circle cx="145.83" cy="20.83" r="20.83" fill="#f21d2f"/>
+                        <circle cx="104.17" cy="63.77" r="20.83" fill="#f21d2f"/>
+                        <circle cx="187.5" cy="63.77" r="20.83" fill="#f21d2f"/>
+                        <circle cx="186.74" cy="127.53" r="20.83" fill="#f21d2f"/>
+                        <circle cx="270.83" cy="128.41" r="20.83" fill="#f21d2f"/>
+                        <circle cx="104.17" cy="127.53" r="20.83" fill="#f21d2f"/>
+                        <circle cx="20.83" cy="127.53" r="20.83" fill="#f21d2f"/>
+                        <g id="_9nKCT7" data-name="9nKCT7">
+                          <path d="M102.5,98.31l.14-8.76h2.47L105,98.16l4.12-4.25.11.1,0,0c0,.93,0,1.86,0,2.8a.47.47,0,0,1-.14.29l-5.38,5.39s0,0-.13.06l-1.88-1.93c-1.09-1.09-2.18-2.16-3.26-3.26a.73.73,0,0,1-.19-.47c0-.9,0-1.8,0-2.7l.11,0Z"/>
+                        </g>
+                        <g id="_9nKCT7-2" data-name="9nKCT7">
+                          <path d="M43.94,102.66l6.29-6.09L52,98.31l-6.19,6,5.92-.09v.15s0,0,0,.06c-.66.66-1.32,1.32-2,2a.51.51,0,0,1-.31.11H41.8l-.13,0c0-.88,0-1.79,0-2.69,0-1.54,0-3.07,0-4.61a.75.75,0,0,1,.19-.47c.62-.65,1.27-1.28,1.9-1.91l.11,0Z"/>
+                        </g>
+                        <g id="_9nKCT7-3" data-name="9nKCT7">
+                          <path d="M60.85,85.75l6.29-6.09,1.74,1.74-6.18,6,5.92-.08v.15l0,0-2,2a.47.47,0,0,1-.31.11H58.72l-.14,0c0-.88,0-1.79,0-2.7,0-1.53,0-3.07,0-4.6a.69.69,0,0,1,.2-.47c.62-.65,1.26-1.28,1.9-1.92l.11.05Z"/>
+                        </g>
+                        <g id="_9nKCT7-4" data-name="9nKCT7">
+                          <path d="M246.08,104.23,240,98l1.74-1.75,6,6.19-.09-5.92h.15s.05,0,.06,0c.66.66,1.32,1.32,2,2a.45.45,0,0,1,.1.3q0,3.81,0,7.62a.44.44,0,0,1,0,.13c-.88,0-1.79,0-2.69,0-1.54,0-3.07,0-4.61,0a.75.75,0,0,1-.47-.19c-.65-.62-1.28-1.26-1.91-1.9l.05-.11Z"/>
+                        </g>
+                        <g id="_9nKCT7-5" data-name="9nKCT7">
+                          <path d="M229.17,87.32,223.07,81l1.75-1.74,6,6.18-.09-5.92h.15s.06,0,.06,0c.66.66,1.32,1.32,2,2a.47.47,0,0,1,.11.31q0,3.81,0,7.61s0,0,0,.14l-2.7,0c-1.53,0-3.07,0-4.6,0a.74.74,0,0,1-.48-.2c-.64-.62-1.27-1.26-1.91-1.9l0-.11Z"/>
+                        </g>
+                        <g id="_9nKCT7-6" data-name="9nKCT7">
+                          <path d="M168,45.81l-6.09-6.29,1.74-1.74,6,6.18L169.53,38h.15s0,0,.06,0c.66.66,1.32,1.32,2,2a.49.49,0,0,1,.11.31q0,3.81,0,7.62a.44.44,0,0,1,0,.13c-.88,0-1.79,0-2.7,0h-4.6a.73.73,0,0,1-.47-.19c-.65-.62-1.28-1.27-1.92-1.9l.06-.12Z"/>
+                        </g>
+                        <g id="_9nKCT7-7" data-name="9nKCT7">
+                          <path d="M123,44.06,129.25,38,131,39.71l-6.19,6,5.92-.09v.15s0,.05,0,.06c-.66.65-1.32,1.31-2,2a.47.47,0,0,1-.31.11h-7.61l-.13,0c0-.88,0-1.79,0-2.7,0-1.53,0-3.07,0-4.6a.73.73,0,0,1,.19-.47c.62-.65,1.26-1.28,1.9-1.92l.11.05Z"/>
+                        </g>
+                        <g id="_9nKCT7-8" data-name="9nKCT7">
+                          <path d="M186.68,98.31l.14-8.75h2.47l-.14,8.6,4.12-4.25.11.11.05,0c0,.93,0,1.87,0,2.8a.52.52,0,0,1-.14.3l-5.38,5.38s0,0-.13.06l-1.89-1.93c-1.08-1.08-2.17-2.16-3.25-3.26a.73.73,0,0,1-.19-.47c0-.9,0-1.79,0-2.69l.11,0Z"/>
+                        </g>
 
-                  </svg>
+                </svg>
 
-                </div>
-              </button>
+              </div>
+            </button>
 
                 <div class="collapse" id="infherd">
                   <div class="card card-body" id="broadherdexp">
-                    inf herd Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+
+                    <p class="herd_description">This is when a large portion of the population becomes infected with a disease, recovers and then becomes immune to the disease.
+                       The percentage of the population that needs to be infected in order to potentially recover is based on the herd immunity threshold.
+                       The word potential recover is used because there is always a chance that a disease can cause death. Below you can use the sliders to
+                       determine the number of people that would have to become infected and potentially die in order to reach herd immunity through broad infection.
+                    </p>
+
+                    <article class="text-center">
+
+
+
+                        <h5> 328 million (populaiton of USA)</h5>
+                        <h5><output id="hitscale">50</output>% of need to be infected and potential recover.</h5>
+                        <input class="" type="range" min=".50" max=".90" step=".01" value=".5" id="hitslider" style="background:none;">
+                        <h5>which equals</h5>
+                        <h5><output id="hitnumber">164</output> million sick</h5>
+                        <h5>With <output id="deathscale">1</output>% people dying</h5>
+                        <input class="" type="range" min=".01" max=".05" step=".01" value=".01" id="deathslider" style="background:none;">
+                        <h5><output id="deadnumber">16.4</output> million dead</h5>
+
+                    </article>
+
                   </div>
                 </div>
 
-
-
+            <div class="pt-2 d-grid gap-2 hidebutton" id="nextherd">
+                <button class="btn btn-primary pt-3 pb-3" type="button" href="nav.html"><h3>Next</h3></button>
+            </div>
 
       </div>
 
