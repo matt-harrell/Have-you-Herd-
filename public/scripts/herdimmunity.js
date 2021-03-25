@@ -86,30 +86,69 @@ $("#back_button").click(function () {
 });
 
 
+
+
+function nextVis() {
+  $("#nextherd").removeClass("hidebutton");
+
+  // var next = document.getElementById('nextherd');
+  // next.classList.remove("hidebutton");
+
+}
+
 $("#vaxbtn").click( function () {
   var element = document.getElementById("vaxherdexp");
   element.scrollIntoView(true, {block: "center"});
+  $('#vaxbtn').data('clicked', true);
+  if(($('#vaxbtn').data('clicked'))&&($('#broadbtn').data('clicked'))) {
+      nextVis();
+
+   }
+
 
 })
+
+
 
 $("#broadbtn").click( function () {
   var element = document.getElementById("broadherdexp");
   element.scrollIntoView(true, {block: "center"});
+  $('#broadbtn').data('clicked', true);
+  if(($('#vaxbtn').data('clicked'))&&($('#broadbtn').data('clicked'))) {
+    nextVis();
+   }
 
 })
 
-// trying to get next button to appear if both buttons are clicked 
 
-$("#vaxbtn").click(function(){
-    $(this).data('clicked', true);
-    console.log("yes");
-});
+var hitslider = Number($("#hitslider").val());
+
+var deathslider = Number($("#deathslider").val());
 
 
-// $("#broadbtn").click(function(){
-//     $(this).data('clicked', true);
-// });
+// function deadpeople() {
+//   document.getElementById("deathnumber").value = parseInt( * 328);
+// }
 
-if($('#vaxbtn').data('clicked')) {
-    console.log("got it");
-}
+
+document.getElementById("hitslider").oninput = function () {
+	document.getElementById("hitscale").innerHTML = parseInt(this.value * 100);
+  document.getElementById("hitnumber").value = parseInt(Number($("#hitslider").val()) * 328);
+  // document.getElementById("deadnumber").value = Number($("#hitslider").val()) * Number($("#deathslider").val()) * 328;
+  var deathnumber1 = Number($("#hitslider").val()) * Number($("#deathslider").val()) * 328;
+  var deathnumber2 = deathnumber1.toFixed(2);
+  document.getElementById("deadnumber").value = deathnumber2;
+};
+
+document.getElementById("deathslider").oninput = function () {
+	document.getElementById("deathscale").innerHTML = parseInt(this.value * 100);
+  var deathnumber1 = Number($("#hitslider").val()) * Number($("#deathslider").val()) * 328;
+  var deathnumber2 = deathnumber1.toFixed(2);
+  document.getElementById("deadnumber").value = deathnumber2;
+};
+
+
+
+// if($('#vaxbtn').data('clicked')|| $('#vaxbtn').data('clicked')) {
+//      alert('yes');
+//  }
