@@ -120,6 +120,11 @@ html,body{
    visibility: hidden;
  }
 
+.chidden{
+  display: none
+}
+
+
  .red {
  	background: red;
  }

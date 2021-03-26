@@ -152,7 +152,7 @@ if(screen.availHeight > screen.availWidth){
 
 
 
-      alert("Please use turn your phone sideways");
+      alert("Please turn your phone sideways");
 
 }
 
