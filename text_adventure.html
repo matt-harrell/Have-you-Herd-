@@ -110,20 +110,10 @@
 
 
 
-              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button">
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="take_out_btn">
                 <h2 class="p-3 text_adv_txt">Take your child out of school for the day </h2>
 
               </button>
-
-
-
-
-
-
-
-
-
-
 
 
       </div>
@@ -187,6 +177,35 @@
 
               <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="no_back_outbreak_end">
                 <h2 class="p-3 text_adv_txt">Don’t let them go back to school.</h2>
+              </button>
+
+      </div>
+
+    </div>
+
+    <div class="chidden" id="local_news">
+      <section id="local_news_text">
+        <p class="herd_description m-3">
+          You take your child out of school for the day and take them home. After dinner you watch the local news. They
+          report that there is large flu outbreak at your child’s school.
+        </p>
+
+
+        <p class="herd_description m-3">
+          How do you react?
+        </p>
+      </section>
+
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="local_news_choices">
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="virtual_local_news_btn">
+                <h2 class="p-3 text_adv_txt">Contact your child’s school the next day and plan to have your child to be taught virtually.</h2>
+              </button>
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="go_back_local_news_btn">
+                <h2 class="p-3 text_adv_txt">Let your child go back the school the next day</h2>
               </button>
 
       </div>
@@ -318,13 +337,42 @@
 
 
 
-                <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button">
+                <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="touch_head_nothing_btn">
                   <h2 class="p-3 text_adv_txt">Touch the top of their head to see if it is warm</h2>
 
                 </button>
 
 
           </div>
+
+      </div>
+
+    <div class="chidden" id="not_sure_check">
+        <section id="not_sure_check_text">
+          <p class="herd_description m-3">
+            You touch the top of their head and it feels
+            like they have a fever but you are not sure.
+          </p>
+
+
+          <p class="herd_description m-3">
+            What do you do?
+          </p>
+        </section>
+
+
+        <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="not_sure_check_choices">
+
+
+                <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="medicine_not_sure_btn">
+                  <h2 class="p-3 text_adv_txt">Give them medicine</h2>
+                </button>
+
+                <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="take_doc_not_sure_btn">
+                  <h2 class="p-3 text_adv_txt">Take them to the doctor</h2>
+                </button>
+
+        </div>
 
       </div>
 
@@ -349,7 +397,7 @@
 
 
 
-              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button">
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="take_doc_tissue_yes_btn">
                 <h2 class="p-3 text_adv_txt">Take them to the doctor</h2>
 
               </button>
@@ -380,7 +428,7 @@
 
 
 
-              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button">
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="home_hospital_btn">
                 <h2 class="p-3 text_adv_txt">Take care of them at home.</h2>
 
               </button>
@@ -390,11 +438,32 @@
 
     </div>
 
+    <div class="chidden" id="home_hospital">
+      <section id="home_hospital_text">
+        <p class="herd_description m-3">
+          After a week of taking care of them at home, their fever doesn’t subside. Their
+          temperature rises to 103 and take them to the hospital. After week of care they
+          are able to return home.
+        </p>
+
+      </section>
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="home_hospital_choices">
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="restart_home_hospital_btn">
+                <h2 class="p-3 text_adv_txt">Restart</h2>
+              </button>
+
+      </div>
+
+    </div>
+
     <div class="chidden" id="doctor">
       <section id="doctor_text">
         <p class="herd_description m-3">
           You take them to the doctor and they have the flu. Luckily, since it was caught early
-          The doctors prescribes medication and after a couple days your child feels better.
+          the doctor prescribes medication and after a couple days your child feels better.
         </p>
       </section>
 

@@ -213,16 +213,83 @@ $("#do_nothing_news_button").click(function(){
   tl.fromTo("#do_nothing_news_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
 });
 
+$("#take_out_btn").click(function(){
+  tl.to("#yes_start_choice_text", {opacity:0});
+  tl.to("#yes_start_choice_buttons", {opacity:0},"<");
+  $("#yes_start_choice_text").appendTo("#yes_start_choice");
+  $("#yes_start_choice_buttons").appendTo("#yes_start_choice");
+  $("#local_news_text").appendTo("#text_holder");
+  $("#local_news_choices").appendTo("#button_holder");
+  tl.fromTo("#local_news_text", {opacity: 0}, {opacity: 1, duration:.3});
+  tl.fromTo("#local_news_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
+});
+
+$("#virtual_local_news_btn").click(function(){
+  tl.to("#local_news_text", {opacity:0});
+  tl.to("#local_news_choices", {opacity:0},"<");
+  $("#local_news_text").appendTo("#local_news");
+  $("#local_news_choices").appendTo("#local_news");
+  $("#virtual_life_text").appendTo("#text_holder");
+  $("#virtual_life_choices").appendTo("#button_holder");
+  tl.fromTo("#virtual_life_text", {opacity: 0}, {opacity: 1, duration:.3});
+  tl.fromTo("#virtual_life_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
+});
+
+$("#go_back_local_news_btn").click(function(){
+  tl.to("#local_news_text", {opacity:0});
+  tl.to("#local_news_choices", {opacity:0},"<");
+  $("#local_news_text").appendTo("#local_news");
+  $("#local_news_choices").appendTo("#local_news");
+  $("#do_nothing_news_text").appendTo("#text_holder");
+  $("#comes_home_1").addClass("chidden");
+  $("#comes_home_2").removeClass("chidden");
+  $("#do_nothing_news_choices").appendTo("#button_holder");
+  tl.fromTo("#do_nothing_news_text", {opacity: 0}, {opacity: 1, duration:.3});
+  tl.fromTo("#do_nothing_news_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
+});
+
 $("#tissue_yes_button").click(function(){
   tl.to("#do_nothing_news_text", {opacity:0});
   tl.to("#do_nothing_news_choices", {opacity:0},"<");
   $("#do_nothing_news_text").appendTo("#do_nothing_news");
   $("#do_nothing_news_choices").appendTo("#do_nothing_news");
-  // $("#tissue_yes").removeClass("chidden");
   $("#tissue_yes_text").appendTo("#text_holder");
   $("#tissue_yes_choices").appendTo("#button_holder");
   tl.fromTo("#tissue_yes_text", {opacity: 0}, {opacity: 1, duration:.3});
   tl.fromTo("#tissue_yes_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
+});
+
+$("#touch_head_nothing_btn").click(function(){
+  tl.to("#do_nothing_news_text", {opacity:0});
+  tl.to("#do_nothing_news_choices", {opacity:0},"<");
+  $("#do_nothing_news_text").appendTo("#do_nothing_news");
+  $("#do_nothing_news_choices").appendTo("#do_nothing_news");
+  $("#not_sure_check_text").appendTo("#text_holder");
+  $("#not_sure_check_choices").appendTo("#button_holder");
+  tl.fromTo("#not_sure_check_text", {opacity: 0}, {opacity: 1, duration:.3});
+  tl.fromTo("#not_sure_check_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
+});
+
+$("#take_doc_not_sure_btn").click(function(){
+  tl.to("#not_sure_check_text", {opacity:0});
+  tl.to("#not_sure_check_choices", {opacity:0},"<");
+  $("#not_sure_check_text").appendTo("#not_sure_check");
+  $("#not_sure_check_choices").appendTo("#not_sure_check");
+  $("#doctor_text").appendTo("#text_holder");
+  $("#doctor_choices").appendTo("#button_holder");
+  tl.fromTo("#doctor_text", {opacity: 0}, {opacity: 1, duration:.3});
+  tl.fromTo("#doctor_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
+});
+
+$("#medicine_not_sure_btn").click(function(){
+  tl.to("#not_sure_check_text", {opacity:0});
+  tl.to("#not_sure_check_choices", {opacity:0},"<");
+  $("#not_sure_check_text").appendTo("#not_sure_check");
+  $("#not_sure_check_choices").appendTo("#not_sure_check");
+  $("#medicine_text").appendTo("#text_holder");
+  $("#medicine_choices").appendTo("#button_holder");
+  tl.fromTo("#medicine_text", {opacity: 0}, {opacity: 1, duration:.3});
+  tl.fromTo("#medicine_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
 });
 
 $("#give_medicine_button").click(function(){
@@ -236,6 +303,17 @@ $("#give_medicine_button").click(function(){
   tl.fromTo("#medicine_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
 });
 
+$("#take_doc_tissue_yes_btn").click(function(){
+  tl.to("#tissue_yes_text", {opacity:0});
+  tl.to("#tissue_yes_choices", {opacity:0},"<");
+  $("#tissue_yes_text").appendTo("#tissue_yes");
+  $("#tissue_yes_choices").appendTo("#tissue_yes");
+  $("#doctor_text").appendTo("#text_holder");
+  $("#doctor_choices").appendTo("#button_holder");
+  tl.fromTo("#doctor_text", {opacity: 0}, {opacity: 1, duration:.3});
+  tl.fromTo("#doctor_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
+});
+
 $("#doctor_med_btn").click(function(){
   tl.to("#medicine_text", {opacity:0});
   tl.to("#medicine_choices", {opacity:0},"<");
@@ -245,6 +323,28 @@ $("#doctor_med_btn").click(function(){
   $("#doctor_choices").appendTo("#button_holder");
   tl.fromTo("#doctor_text", {opacity: 0}, {opacity: 1, duration:.3});
   tl.fromTo("#doctor_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
+});
+
+$("#home_hospital_btn").click(function(){
+  tl.to("#medicine_text", {opacity:0});
+  tl.to("#medicine_choices", {opacity:0},"<");
+  $("#medicine_text").appendTo("#medicine");
+  $("#medicine_choices").appendTo("#medicine");
+  $("#home_hospital_text").appendTo("#text_holder");
+  $("#home_hospital_choices").appendTo("#button_holder");
+  tl.fromTo("#home_hospital_text", {opacity: 0}, {opacity: 1, duration:.3});
+  tl.fromTo("#home_hospital_choices", {opacity: 0}, {opacity: 1, duration:.3}, "<");
+});
+
+$("#restart_home_hospital_btn").click(function(){
+  tl.to("#home_hospital_text", {opacity:0});
+  tl.to("#home_hospital_choices", {opacity:0},"<");
+  $("#home_hospital_text").appendTo("#home_hospital");
+  $("#home_hospital_choices").appendTo("#home_hospital");
+  $("#start_adv_text").appendTo("#text_holder");
+  $("#start_adv_buttons").appendTo("#button_holder");
+  tl.fromTo("#start_adv_text", {opacity: 0}, {opacity: 1, duration:.3});
+  tl.fromTo("#start_adv_buttons", {opacity: 0}, {opacity: 1, duration:.3}, "<");
 });
 
 $("#restart_doc_btn").click(function(){
