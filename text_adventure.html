@@ -49,8 +49,8 @@
     <div id="text_holder">
 
 
-      <div  class="position-relative" id="start_adv">
-      <section class="">
+
+      <section id="start_adv_text">
         <p class="herd_description m-3">
           Your child was born with a weak immune system and can’t get certain
           vaccines like the MMR or the flu vaccine.
@@ -71,203 +71,392 @@
           What do you say?
         </p>
       </section>
-        <div class="container-fuild d-flex flex-column" style="padding-bottom:15%; background:#A5C6E4; max-height:40vh;">
+
+
+
+
+    </div>
+
+    <div class="chidden" id="start_adv">
+    </div>
+
+    <div class="chidden" id="yes_start_choice">
+      <section id="yes_start_choice_text">
+        <p class="herd_description m-3">
+          The next day they go to school and you head to work. </p>
+
+        <p class="herd_description m-3">
+          On your lunch break, you read on the news that flu cases are on the rise
+          in schools.
+        </p>
+
+
+        <p class="herd_description m-3">
+          How you react?
+        </p>
+      </section>
+
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="yes_start_choice_buttons">
 
 
 
 
 
 
-                <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="yes">
-                  <h2 class="p-3 herd_txt">Yes</h2>
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="do_nothing_news_button">
+                <h2 class="p-3 text_adv_txt">Do nothing</h2>
+              </button>
+
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button">
+                <h2 class="p-3 text_adv_txt">Take your child out of school for the day </h2>
+
+              </button>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+    <div class="chidden" id="no_start_choice">
+      <section id="no_start_choice_text">
+        <p class="herd_description m-3">
+          The next day you head to work.
+        </p>
+
+        <p class="herd_description m-3">
+          On your lunch break you read on the news that flu cases are on the rise especially
+          in schools. Once you come home your child begs to go back to school and
+          see their friends.
+        </p>
+
+
+        <p class="herd_description m-3">
+          What is your decision?
+        </p>
+      </section>
+
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="no_start_choice_buttons">
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="back_school_no_start_btn">
+                <h2 class="p-3 text_adv_txt">Let them go back to school the next day.</h2>
+              </button>
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="virtual_no_start_btn">
+                <h2 class="p-3 text_adv_txt">Contact your child’s school the next day and ask if they could be taught virtually. Schedule virtual play dates with thier friends.</h2>
+              </button>
+
+      </div>
+
+    </div>
+
+    <div class="chidden" id="virtual_life">
+      <section id="virtual_life_text">
+        <p class="herd_description m-3">
+          The school agrees to teach your child virtually till flu cases start to decrease.
+          You plan some virtual play dates but after a few days your child tells you they really miss their friends
+          and wants to back to school. You check the schools website and they report a decrease in flu cases.
+        </p>
+
+
+        <p class="herd_description m-3">
+          What is your decision?
+        </p>
+      </section>
+
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="virtual_life_choices">
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="back_back_after_btn">
+                <h2 class="p-3 text_adv_txt">Let them go back to school.</h2>
+              </button>
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="no_back_outbreak_end">
+                <h2 class="p-3 text_adv_txt">Don’t let them go back to school.</h2>
+              </button>
+
+      </div>
+
+    </div>
+
+    <div class="chidden" id="back_after">
+      <section id="back_after_text">
+        <p class="herd_description m-3">
+          You let them go back to school. When they come home from school they tell you about
+          their day and how they got to see most of their friends. Some were not at school because they were sick.
+          Your child sneezes.
+        </p>
+
+
+        <p class="herd_description m-3">
+          How do you react?
+        </p>
+      </section>
+
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="back_after_choices">
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="tissue_back_after_btn">
+                <h2 class="p-3 text_adv_txt">Give them a tissue</h2>
+              </button>
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="check_back_after_btn">
+                <h2 class="p-3 text_adv_txt">Touch the top of their head to see if it is warm</h2>
+              </button>
+
+      </div>
+
+    </div>
+
+    <div class="chidden" id="tissue_restart">
+      <section id="tissue_restart_text">
+        <p class="herd_description m-3">
+          You give them a tissue and they continue to tell you about their day.
+          It was just a sneeze. The night goes on as normal and you are thankful that your child didn’t get sick.
+        </p>
+
+      </section>
+
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="tissue_restart_choices">
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="tissue_restart_btn">
+                <h2 class="p-3 text_adv_txt">Restart</h2>
+              </button>
+
+      </div>
+
+    </div>
+
+    <div class="chidden" id="check_restart">
+      <section id="check_restart_text">
+        <p class="herd_description m-3">
+          You touch the top of their head and it feels normal. It was just a sneeze.
+          The night goes on as normal and you are thankful that your child didn’t get sick.
+        </p>
+
+      </section>
+
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="check_restart_choices">
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="check_restart_btn">
+                <h2 class="p-3 text_adv_txt">Restart</h2>
+              </button>
+
+      </div>
+
+    </div>
+
+    <div class="chidden" id="restart_outbreak_end">
+      <section id="restart_outbreak_end_text">
+        <p class="herd_description m-3">
+          Two weeks pass and the school reports the outbreak is over.  Your child
+          goes back to school and sees all their friends again.
+        </p>
+
+      </section>
+
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="restart_outbreak_end_choices">
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="restart_outbreak_end_btn">
+                <h2 class="p-3 text_adv_txt">Restart</h2>
+              </button>
+
+      </div>
+
+    </div>
+
+    <div class="chidden" id="do_nothing_news">
+
+      <section id="do_nothing_news_text">    <!--this screen is used mulitple times in slightly different context this why is has different descriptions -->
+        <p class="herd_description m-3 chidden" id="comes_home_1">
+          Your child comes home from school and tells you about their day.
+          You ask if they enjoyed seeing all their friends again.
+        </p>
+
+        <p class="herd_description m-3 chidden" id="comes_home_2">
+          The next day, your child comes home from school and tells you about their day.
+          You ask if they enjoyed seeing all their friends again.
+        </p>
+
+        <p class="herd_description m-3">
+          They respond that some of their friends were not at
+          school because they were sick. Your child sneezes.
+        </p>
+
+
+        <p class="herd_description m-3">
+          What do you do?
+      </section>
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="do_nothing_news_choices">
+
+
+                <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="tissue_yes_button">
+                  <h2 class="p-3 text_adv_txt">Give them a tissue</h2>
                 </button>
 
 
 
                 <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button">
-                  <h2 class="p-3 herd_txt">No</h2>
+                  <h2 class="p-3 text_adv_txt">Touch the top of their head to see if it is warm</h2>
 
                 </button>
 
 
-
-
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-
-
-    </div>
-
-    <div class="chidden" id="yes_start_choice">
-      <p class="herd_description m-3">
-        The next day they go to school and you head to work. </p>
-
-      <p class="herd_description m-3">
-        On your lunch break, you read on the news that flu cases are on the rise
-        in schools.
-      </p>
-
-
-      <p class="herd_description m-3">
-        How you react?
-      </p>
-
-      <div class="container-fuild " style="padding-bottom:10%; background:#A5C6E4;">
-
-
-
-        <div class="d-grid gap-2 pt-3 pb-1 m-2" >
-
-
-              <button class="btn btn-primary herd_buttons" type="button" id="do_nothing_news_button">
-                <h2 class="p-3 herd_txt">Do nothing</h2>
-              </button>
-
-
-
-              <button class="btn btn-primary herd_buttons" type="button">
-                <h2 class="p-3 herd_txt">Take your child out of school for the day </h2>
-
-              </button>
-
-
-
-
-
-        </div>
-
-
-
-
-
+          </div>
 
       </div>
-    </div>
-
-    <div class="chidden" id="do_nothing_news">
-      <p class="herd_description m-3">
-        Your child comes home from school and tells you about their day.
-        You ask if they enjoyed seeing all their friends again.
-      </p>
-
-      <p class="herd_description m-3">
-        They respond that some of their friends were not at
-        school because they were sick. Your child sneezes.
-      </p>
-
-
-      <p class="herd_description m-3">
-        What do you do?
-      </p>
-
-      <div class="container-fuild" style="padding-bottom:10%; background:#A5C6E4; margin-top:30%;">
-
-
-
-        <div class="d-grid gap-2 pt-3 pb-1 m-2" >
-
-
-              <button class="btn btn-primary herd_buttons" type="button" id="tissue_yes_button">
-                <h2 class="p-3 herd_txt">Give them a tissue</h2>
-              </button>
-
-
-
-              <button class="btn btn-primary herd_buttons" type="button">
-                <h2 class="p-3 herd_txt">Touch the top of their head to see if it is warm</h2>
-
-              </button>
-
-
-
-
-
-        </div>
-
-
-
-
-
-
-      </div>
-    </div>
 
     <div class="chidden" id="tissue_yes">
-      <p class="herd_description m-3">
-        You give them a tissue and they take it. They sneeze again. You give them
-        another and you get the thermometer. They have a mid-grade fever.
-      </p>
+      <section id="tissue_yes_text">
+        <p class="herd_description m-3">
+          You give them a tissue and they take it. They sneeze again. You give them
+          another and you get the thermometer. They have a mid-grade fever.
+        </p>
 
-      <p class="herd_description m-3">
-        What do you do?
-      </p>
+        <p class="herd_description m-3">
+          What do you do?
+        </p>
+      </section>
 
-      <div class="container-fuild" style="padding-bottom:10%; background:#A5C6E4; margin-top:50%;">
-
-
-
-        <div class="d-grid gap-2 pt-3 pb-1 m-2" >
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="tissue_yes_choices">
 
 
-              <button class="btn btn-primary herd_buttons" type="button">
-                <h2 class="p-3 herd_txt">Give them medicine</h2>
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="give_medicine_button">
+                <h2 class="p-3 text_adv_txt">Give them medicine</h2>
               </button>
 
 
 
-              <button class="btn btn-primary herd_buttons" type="button">
-                <h2 class="p-3 herd_txt">Take them to the doctor</h2>
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button">
+                <h2 class="p-3 text_adv_txt">Take them to the doctor</h2>
 
               </button>
-
-
-
-
-
-        </div>
-
-
-
-
 
 
       </div>
+
+    </div>
+
+    <div class="chidden" id="medicine">
+      <section id="medicine_text">
+        <p class="herd_description m-3">
+          You give them medicine and send them to bed after dinner. The next morning
+          Their fever has risen and they have chills.
+        </p>
+
+        <p class="herd_description m-3">
+          What do you do?
+        </p>
+      </section>
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="medicine_choices">
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="doctor_med_btn">
+                <h2 class="p-3 text_adv_txt">Take them to the doctor</h2>
+              </button>
+
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button">
+                <h2 class="p-3 text_adv_txt">Take care of them at home.</h2>
+
+              </button>
+
+
+      </div>
+
+    </div>
+
+    <div class="chidden" id="doctor">
+      <section id="doctor_text">
+        <p class="herd_description m-3">
+          You take them to the doctor and they have the flu. Luckily, since it was caught early
+          The doctors prescribes medication and after a couple days your child feels better.
+        </p>
+      </section>
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="doctor_choices">
+
+
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="restart_doc_btn">
+                <h2 class="p-3 text_adv_txt">Restart</h2>
+              </button>
+
+      </div>
+
     </div>
 
 
 
+  <section class="fixed-bottom" id="navandbuttons">
+
+
+    <article class="overflow-scroll" id="button_holder">
+
+      <div class="container-fuild d-flex flex-column" style="background:#A5C6E4;" id="start_adv_buttons">
 
 
 
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="yes">
+                <h2 class="p-1 text_adv_txt">Yes</h2>
+              </button>
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-light  fixed-bottom d-flex flex-nowrap justify-content-around p-0" style="max-height: 20%;background:#B2C6E4">
+              <button class="btn btn-primary herd_buttons m-1 flex-shrink-1" type="button" id="no">
+                <h2 class="p-1 text_adv_txt">No</h2>
 
-      <a class="nav-link actived d-flex flex-shrink-1 justify-content-around" aria-current="page" id="back_button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20%" height="20%" fill="white" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
-          <path d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-        </svg>
+              </button>
+
+
+      </div>
+
+    </article>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light d-flex flex-nowrap justify-content-around p-0" style="max-height: 20%;background:#B2C6E4">
+
+        <a class="nav-link actived d-flex flex-shrink-1 justify-content-around" aria-current="page" id="back_button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20%" height="20%" fill="white" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+            <path d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+          </svg>
+          </a>
+
+        <a class="nav-link active d-flex flex-shrink-1 justify-content-around" aria-current="page" href="nav.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20%" height="20%" fill="white" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                  </svg>
         </a>
 
-      <a class="nav-link active d-flex flex-shrink-1 justify-content-around" aria-current="page" href="nav.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20%" height="20%" fill="white" class="bi bi-house-fill" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-                </svg>
-      </a>
 
+      </nav>
 
-    </nav>
-
+  </section>
 
 
 

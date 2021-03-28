@@ -62,11 +62,17 @@ html,body{
  }
 
  .herd_txt{
-    color: white;
-    text-shadow: 1px 1px 3px black;
+    color: #F2F2F2;
+    text-shadow: 1px 1px 5px black;
     font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: center;
+
 
   }
+
+
 
 .herd_svg{
  max-width: 10em;
@@ -87,6 +93,25 @@ html,body{
 
 
 }
+
+/* text Adventure */
+.text_adv_txt{
+   color: #F2F2F2;
+   /* font-size: 80%; */
+   text-shadow: 1px 1px 5px black;
+   font-family: 'Roboto', sans-serif;
+   text-align: justify;
+   text-justify: inter-word;
+   text-align-last: center;
+
+ }
+
+ #button_holder{
+   max-height: 40vh;
+ }
+
+
+
 
 .dot_demo{
  width: 1em;
@@ -156,6 +181,12 @@ html,body{
 .pass{
   color: green;
 }
+
+#no_start_choice_buttons{
+
+
+}
+
 
  #grey_demo{
    background: grey;
