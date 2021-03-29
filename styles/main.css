@@ -110,7 +110,9 @@ html,body{
    max-height: 40vh;
  }
 
-
+.btn-primary{
+  color: white;
+}
 
 
 .dot_demo{

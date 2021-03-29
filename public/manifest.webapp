@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "name": "HIT Value",
+  "name": "Have You Herd?",
   "launch_path": "/index.html",
-  "description": "displays HIT value",
+  "description": "An app that teaches the many benefits of Herd Immunity.",
   "icons": {
     "128": "/images/touch/icon-128x128.png"
   },
@@ -18,8 +18,8 @@
   },
   "locales": {
     "en": {
-      "name": "HIT Value",
-      "description": "displays HIT value"
+      "name": "Have you Herd?",
+      "description": "An app that teaches the many benefits of Herd Immunity."
     }
   }
 }
