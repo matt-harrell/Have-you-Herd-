@@ -18,11 +18,11 @@ html,body{
 }
 
 .sub_title{
-  font-size: 3em;
   color:white;
   text-shadow: 1px 1px 5px black;
   font-family: 'Luckiest Guy', cursive;
   letter-spacing: 3px;
+
 
 }
 
@@ -49,11 +49,13 @@ html,body{
 }
 
  .exptitle{
-   background:#A5C6E4;
+   background:#B2C6E4;
    color:white;
    text-shadow: 1px 1px 3px black;
    font-family: 'Luckiest Guy', cursive;
    letter-spacing: 3px;
+   font-size: 3em;
+
 
  }
 
@@ -190,6 +192,24 @@ html,body{
 }
 
 
+.resource_text{
+   color: #F2F2F2;
+   /* font-size: 80%; */
+   text-shadow: 1px 1px 5px black;
+   font-family: 'Roboto', sans-serif;
+   text-align: center;
+
+ }
+
+ .resource_buttons{
+    box-shadow: .5px .5px 5px black;
+  }
+
+#external_window{
+  width: 100vw;
+  height: 700px;
+}
+
  #grey_demo{
    background: grey;
    width: 1em;
@@ -208,6 +228,10 @@ html,body{
   display: inline-block;
   font-size: 1.5rem;
 }
+
+
+
+
 
 /* range css written by https://www.cssportal.com/style-input-range/ */
 

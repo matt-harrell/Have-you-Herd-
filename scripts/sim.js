@@ -111,7 +111,7 @@ document.getElementById("r").oninput = function () {
 
 function scroll() {
   var element = document.getElementById("dayspast");
-  element.scrollIntoView(true, {block: "center"});
+  element.scrollIntoView(true, {block: "start"});
 }
 
 function scrollResults() {
@@ -147,8 +147,15 @@ $("#button_one").click(function () {
 
 $(".dot").addClass("hide");
 
-function resetDots() {
+function clear (){
   $(".dot.red, .dot.blue,.dot.grey").detach();
+}
+
+function resetDots() {
+  var tl = gsap.timeline();
+  tl.to("#dot_holder", {opacity:0, duration: .1});
+  $(".dot.red, .dot.blue,.dot.grey").detach();
+  tl.to("#dot_holder", {opacity:1, duration:.1});
 }
 
 
@@ -193,6 +200,7 @@ function begin() {
 
     document.getElementById("dayspast").innerHTML = t;
     t++;
+
   }
 
 var one = 1
@@ -241,7 +249,7 @@ function myLoop() {
       $('#days_results').html(t);
       $('#inf_results').html(a);
       $('#vax_results').html(v);
-      setTimeout(scrollResults,2000);
+      scroll();
       return;
 
     }
@@ -271,6 +279,8 @@ function myLoop() {
       $('#days_results').html(t);
       $('#inf_results').html(s+y);
       $('#vax_results').html(v);
+      scroll();
+
       return;
 
     }
@@ -368,7 +378,8 @@ begin();
 scroll();
 setTimeout(resetDots,1500);
 setTimeout(myLoop);
-scrollResults();
+// scroll();
+// scrollResults();
 
 
 
