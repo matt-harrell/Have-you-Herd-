@@ -20,17 +20,34 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v1';
+const PRECACHE = 'precache-v2';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
   'index.html',
   './', // Alias for index.html
+  'herd_immunity_sim.html',
+  'herd_immunity.html',
+  'nav.html',
+  'testimonials.html',
+  'text_adventure.html',
+  'vaccination_resources.html',
+  'vulnerable.html',
   'styles/main.css',
+  'styles/animation.css',
+  'custom.css',
   'scripts/main.js',
+  'scripts/animation.js',
+  'scripts/herdimmunity.js',
+  'scripts/resources.js',
+  'scripts/sim.js',
+  'scripts/testimonials.js',
+  'scripts/text_adventure.js',
   'error.html',
 ];
+
+// need to link all pages
 
 // The install handler takes care of precaching the resources we always need.
 self.addEventListener('install', event => {
