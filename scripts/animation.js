@@ -92,8 +92,8 @@ gsap.set("#Sally_side_back_4", {opacity:0});
 gsap.set("#question_mark", {opacity:0});
 
 //sceneFive Stage
-gsap.set("#wenthome", {opacity:0});
-gsap.set("#wheremonique", {opacity:0});
+gsap.set(".wenthome", {opacity:0});
+gsap.set(".wheremonique", {opacity:0});
 
 //sceneSix Stage
 gsap.set("#Severalweeks_6", {opacity:0});
@@ -275,12 +275,12 @@ function sceneFour(){
 var tl5 = gsap.timeline();
 function sceneFive(){
 
-	tl5.fromTo("#wheremonique", {opacity:0}, {opacity:1, duration:1.5, delay:1.3});
+	tl5.fromTo(".wheremonique", {opacity:0}, {opacity:1, duration:1.5, delay:1.3});
 	tl5.to("#Sally_front_5",{y:-5, duration:.3, yoyo:true,repeat:1}, "<");
-	tl5.to("#wheremonique", {opacity:0, duration:0, delay:.5})
-	tl5.fromTo("#wenthome", {opacity:0}, {opacity:1, duration:1.5});
+	tl5.to(".wheremonique", {opacity:0, duration:0, delay:.5})
+	tl5.fromTo(".wenthome", {opacity:0}, {opacity:1, duration:1.5});
 	tl5.to("#Ana_5",{y:-5, duration:.3, yoyo:true,repeat:1}, "<");
-	tl5.fromTo("#wenthome", {opacity:0}, {opacity:0, duration:.001, delay:2.5});
+	tl5.fromTo(".wenthome", {opacity:0}, {opacity:0, duration:.001, delay:2.5});
 	return tl5;
 }
 
