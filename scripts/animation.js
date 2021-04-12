@@ -105,13 +105,13 @@ gsap.set("#Sally_side_7", {opacity:0});
 gsap.set("#Sally_side_talk_7", {opacity:0});
 // gsap.set("#Monique_side_7", {opacity:0});
 // gsap.set("#Monique_side_back_7", {opacity:0});
-gsap.set("#hospital", {opacity:0});
-gsap.set("#Yourback", {opacity:0});
+gsap.set(".hospital", {opacity:0});
+gsap.set(".Yourback", {opacity:0});
 gsap.set("#xpoint", {opacity:0});
 
 // sceneEight stage
 gsap.set("#Monique_side_8", {opacity:0});
-gsap.set("#mustscary", {opacity:0});
+gsap.set(".mustscary", {opacity:0});
 gsap.set("#hugs", {opacity:0});
 
 // sceneNine stage
@@ -326,10 +326,10 @@ function sceneSeven(){
 	// tl7.set("#Monique_side_back_7", {x:170})
 	tl7.to("#Monique_side_back_7", {x:0, duration:1});
 	tl7.to("#Sally_side_7", {x:142, duration:1}, "<");
-	tl7.to("#Yourback", {opacity:1, duration:.3});
-	tl7.to("#Yourback", {opacity:0, duration:.3,delay:2});
-	tl7.to("#hospital", {opacity:1, duration:.3});
-	tl7.to("#hospital", {opacity:0, duration:.001,delay:4});
+	tl7.to(".Yourback", {opacity:1, duration:.3});
+	tl7.to(".Yourback", {opacity:0, duration:.3,delay:2});
+	tl7.to(".hospital", {opacity:1, duration:.3});
+	tl7.to(".hospital", {opacity:0, duration:.001,delay:4});
 
 	return tl7;
 }
@@ -337,9 +337,9 @@ function sceneSeven(){
 
 var tl8 = gsap.timeline();
 function sceneEight(){
-	tl8.to("#mustscary",{opacity:1, duration:.3, delay:1});
+	tl8.to(".mustscary",{opacity:1, duration:.3, delay:1});
 	tl8.to("#Sally_side_talk_8", {y:-5,duration:.3, yoyo:true, repeat:1},"<");
-	tl8.to("#mustscary",{opacity:0, duration:.3, delay:2});
+	tl8.to(".mustscary",{opacity:0, duration:.3, delay:2});
 
 	tl8.to("#Sally_side_talk_8", {x:50, duration:.5});
 
